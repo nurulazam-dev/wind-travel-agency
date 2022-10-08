@@ -13,8 +13,8 @@ const BookSteps = () => {
     return (
         <div className="section my-7 py-7">
             <div className="container mx-auto">
-                <div className='flex flex-row items-center'>
-                    <div className='basis-1/2'>
+                <div className='flex flex-col gap-y-[30px] lg:flex-row lg:gap-x-[15px] items-center'>
+                    <div className='lg:basis-1/2'>
                         <p className='text-[18px] font-semibold'>Easy and Fast</p>
                         <div className="text-[50px] font-bold">
                             <h3>Book your next trip</h3>
@@ -48,7 +48,7 @@ const BookSteps = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='basis-1/2'>
+                    <div className='lg:basis-1/2'>
                         <div class="card card-compact w-96 bg-base-100 shadow-xl">
                             <div class="card-body">
                                 <img src={boracayImg} alt="Baracay" />

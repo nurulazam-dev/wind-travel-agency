@@ -10,7 +10,7 @@ const MostPopularCard = () => {
                 <h4 className='uppercase text-[24px] font-bold text-white'>{title}</h4>
                 <img src={leftErrowIcon} alt="" className='mr-2 pr-3' />
             </div>
-            <div className="flex my-5">
+            <div className="flex flex-col gap-y-[30px] lg:flex-row lg:gap-x-[15px]">
 
                 {datas.map((data) => {
                     const { icon, people, title, usersIcon } = data;

@@ -5,7 +5,7 @@ const DestinationsCards = () => {
     const { cards } = sell;
     return (
         <>
-            <div className='flex justify-center items-center'>
+            <div className='flex flex-col gap-y-[30px] lg:flex-row lg:gap-x-[15px] justify-center items-center'>
                 {cards.map((card) => {
                     const { icon, title, price, subtitle } = card;
                     return (

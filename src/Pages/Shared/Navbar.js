@@ -5,12 +5,12 @@ import navLogo from '../../Assets/Icons/footerIcon.png';
 const Navbar = () => {
 
     const navLinks = <>
-        <li><NavLink to='/' className='text-xl '>Home</NavLink></li>
-        <li><NavLink to='/aboutUs' className='text-xl '>About Us</NavLink></li>
-        <li><NavLink to='/premium' className='text-xl '>Premium</NavLink></li>
-        <li><NavLink to='/blogs' className='text-xl '>Blogs</NavLink></li>
+        <li><NavLink to='/' className='text-[20px]'>Home</NavLink></li>
+        <li><NavLink to='/aboutUs' className='text-[20px]'>About Us</NavLink></li>
+        <li><NavLink to='/premium' className='text-[20px]'>Premium</NavLink></li>
+        <li><NavLink to='/blogs' className='text-[20px]'>Blogs</NavLink></li>
         <li>
-            <select className="select text-xl">
+            <select className="select text-[20px]">
                 <option selected>EN</option>
                 <option>BE</option>
                 <option>HI</option>

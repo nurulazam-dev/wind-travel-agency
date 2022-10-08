@@ -2,8 +2,6 @@
 
 #### Live side: https://wind-travels-agency.netlify.app/
 
-<br />
-
 ### features
 - This project / website is about a Travel Agency ( Wind Travels Agency ).
 - This is a  frontend (React JS) project/website.
@@ -12,5 +10,7 @@
 
 ### Use Technology: 
 `React.JS`, `React Router Dom`, `React Tailwind CSS`, `DaisyUI`.
+<hr />
 
+#### Project Demo
 ![preview img](/src/Assets/project_homies_demo.png)

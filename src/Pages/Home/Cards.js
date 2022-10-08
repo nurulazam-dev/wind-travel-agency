@@ -6,7 +6,7 @@ const Cards = () => {
     const { cards } = service;
     return (
         <>
-            <div className='flex flex-col gap-y-[30px] lg:flex-row lg:gap-x-[30px]'>
+            <div className='flex flex-col gap-y-[30px] lg:flex-row lg:gap-x-[15px]'>
                 {cards.map((card, cardIndex) => {
                     const { icon, title, subtitle } = card;
                     return (

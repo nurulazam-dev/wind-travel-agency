@@ -5,7 +5,7 @@ const SummarySearch = () => {
     const { datas } = summaryData;
 
     return (
-        <div className='bg-slate-200/50 rounded-xl m-2 p-5 flex items-center w-full'>
+        <div className='bg-slate-200/50 rounded-xl m-2 p-5 flex items-center lg:w-full sm:w-75'>
             <div className="stats shadow">
                 {datas.map((data) => {
                     const { icon, errowIcon, title, subtitle } = data;
