@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import { FaBars, FaTimes, FaGlobe, FaPlaneDeparture } from "react-icons/fa";
+import { FaBars, FaTimes, FaGlobe } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import navLogo from "../../Assets/Icons/footerIcon.png";
 

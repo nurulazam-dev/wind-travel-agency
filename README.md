@@ -11,7 +11,7 @@
 
 ### Use Technology:
 
-`React.JS`, `React Router Dom`, `Tailwind CSS`,
+`React.JS`, `React Router Dom`, `Tailwind CSS`, `Framer Motion`, `React Icons`.
 
 <hr />
 
