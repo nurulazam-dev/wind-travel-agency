@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="pt-12">
         <Routers />
       </main>
       <Footer />

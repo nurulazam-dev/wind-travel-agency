@@ -5,9 +5,9 @@ const Category = () => {
   const { title, subtitle } = service;
 
   return (
-    <section className="section my-5 py-4">
+    <section className="section my-5 p-4">
       <div className="container mx-auto">
-        <div className="mb-10">
+        <div className="mb-5">
           <p className="text-center text-[18px]">{subtitle}</p>
           <h2 className="text-center font-semibold text-[50px]">{title}</h2>
         </div>
