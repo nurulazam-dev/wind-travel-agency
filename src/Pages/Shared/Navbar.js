@@ -1,93 +1,161 @@
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
+import { FaBars, FaTimes, FaGlobe, FaPlaneDeparture } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 import navLogo from "../../Assets/Icons/footerIcon.png";
 
+const navLinks = [
+  { to: "/", label: "Home" },
+  { to: "/aboutUs", label: "About Us" },
+  { to: "/premium", label: "Premium" },
+  { to: "/blogs", label: "Blogs" },
+];
+
+const languages = [
+  { code: "EN", label: "English" },
+  { code: "BE", label: "Bengali" },
+  { code: "HI", label: "Hindi" },
+  { code: "AR", label: "Arabic" },
+];
+
 const Navbar = () => {
-  const navLinks = (
-    <>
-      <li>
-        <NavLink to="/" className="text-[20px]">
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/aboutUs" className="text-[20px]">
-          About Us
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/premium" className="text-[20px]">
-          Premium
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/blogs" className="text-[20px]">
-          Blogs
-        </NavLink>
-      </li>
-      <li>
-        <select className="select text-[20px]">
-          <option selected>EN</option>
-          <option>BE</option>
-          <option>HI</option>
-          <option>AR</option>
-        </select>
-      </li>
-      <li>
-        <button className="btn btn-NavLink btn-outline  text-decoration-none fs-5">
-          Book Now
-        </button>
-      </li>
-    </>
-  );
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState("EN");
 
   return (
-    <>
-      <div className="navbar w-full top-0 z-50 fixed lg:px-10">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <label
-              tabIndex="0"
-              className="btn btn-circle swap swap-rotate mx-2 lg:hidden"
-            >
-              <input type="checkbox" />
-              <svg
-                className="swap-off fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 512 512"
+    <nav className="fixed w-full top-0 z-50 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 lg:px-10 py-2 flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-3">
+          <img src={navLogo} alt="WindTravels Logo" className="w-10 h-10" />
+          <span className="text-2xl lg:text-3xl font-bold text-white tracking-wide flex items-center gap-2">
+            WindTravels <FaPlaneDeparture className="text-yellow-300" />
+          </span>
+        </Link>
+
+        {/* Desktop Nav */}
+        <ul className="hidden lg:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <li key={link.to}>
+              <NavLink
+                to={link.to}
+                className={({ isActive }) =>
+                  `text-lg font-medium px-3 py-2 rounded transition-all duration-200 ${
+                    isActive
+                      ? "bg-yellow-300 text-blue-900"
+                      : "text-white hover:bg-blue-800 hover:text-yellow-300"
+                  }`
+                }
               >
-                <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-              </svg>
-              <svg
-                className="swap-on fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 512 512"
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
+          <li>
+            <div className="relative group">
+              <button
+                className="flex items-center gap-2 px-3 py-2 rounded text-white hover:bg-blue-800 transition"
+                aria-label="Select Language"
               >
-                <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
-              </svg>
-            </label>
-            <ul
-              tabIndex="0"
-              className="menu bg-base-100 menu-compact dropdown-content mt-3 p-2 shadow w-52 flex gap-2 flex-col rounded-lg"
-            >
-              {navLinks}
-            </ul>
-          </div>
-          <Link to="/" className="">
-            <div className="flex items-center">
-              <img src={navLogo} alt="" className="w-13" />
-              <h3 className="text-[32px] font-bold">WindTravels</h3>
+                <FaGlobe className="text-yellow-300" />
+                {selectedLang}
+              </button>
+              <ul className="absolute left-0 mt-2 bg-white rounded shadow-lg min-w-[100px] hidden group-hover:block z-10">
+                {languages.map((lang) => (
+                  <li key={lang.code}>
+                    <button
+                      className={`w-full text-left px-4 py-2 hover:bg-blue-100 text-blue-900`}
+                      onClick={() => setSelectedLang(lang.code)}
+                    >
+                      {lang.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </Link>
-        </div>
-        <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal  gap-x-2 p-0">{navLinks}</ul>
-        </div>
+          </li>
+          <li>
+            <Link
+              to="/book"
+              className="bg-yellow-300 text-blue-900 font-semibold px-5 py-2 rounded-full shadow hover:bg-yellow-400 transition flex items-center gap-2"
+            >
+              Book Now
+            </Link>
+          </li>
+        </ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-yellow-300"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          onClick={() => setMobileOpen((open) => !open)}
+        >
+          {mobileOpen ? (
+            <FaTimes className="text-3xl text-yellow-300" />
+          ) : (
+            <FaBars className="text-3xl text-white" />
+          )}
+        </button>
       </div>
-    </>
+
+      {/* Mobile Nav */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="fixed top-0 right-0 w-72 h-screen bg-gradient-to-b from-blue-900 via-blue-700 to-blue-500 shadow-lg z-50 flex flex-col pt-24 px-6"
+          >
+            <ul className="flex flex-col gap-6">
+              {navLinks.map((link) => (
+                <li key={link.to}>
+                  <NavLink
+                    to={link.to}
+                    className={({ isActive }) =>
+                      `block text-lg font-medium px-3 py-2 rounded transition-all duration-200 ${
+                        isActive
+                          ? "bg-yellow-300 text-blue-900"
+                          : "text-white hover:bg-blue-800 hover:text-yellow-300"
+                      }`
+                    }
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </NavLink>
+                </li>
+              ))}
+              <li>
+                <div className="flex items-center gap-2 mt-2">
+                  <FaGlobe className="text-yellow-300" />
+                  <select
+                    value={selectedLang}
+                    onChange={(e) => setSelectedLang(e.target.value)}
+                    className="bg-blue-800 text-white rounded px-2 py-1 focus:outline-none"
+                  >
+                    {languages.map((lang) => (
+                      <option key={lang.code} value={lang.code}>
+                        {lang.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </li>
+              <li>
+                <Link
+                  to="/book"
+                  className="bg-yellow-300 text-blue-900 font-semibold px-5 py-2 rounded-full shadow hover:bg-yellow-400 transition flex items-center gap-2"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Book Now
+                </Link>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
 };
 
