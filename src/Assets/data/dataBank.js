@@ -1,19 +1,19 @@
-import weatherImg from "../src/Assets/Category/weather.png";
-import flightImg from "../src/Assets/Category/plan.png";
-import eventImg from "../src/Assets/Category/event.png";
-import customizationImg from "../src/Assets/Category/customization.png";
-import cebuImg from "../src/Assets/Destinations/cebu.png";
-import manilaImg from "../src/Assets/Destinations/manila.png";
-import davaoImg from "../src/Assets/Destinations/davao.png";
-import userImg from "../src/Assets/hero/userIcon.png";
-import calenderImg from "../src/Assets/hero/calanderIcon.png";
-import HomeImg from "../src/Assets/hero/homeIcon.png";
-import errowImg from "../src/Assets/hero/errowDown.png";
-import leftErrowIcon from "../src/Assets/hero/errowLeft.png";
-import usersIcon from "../src/Assets/hero/usersIcon.png";
-import palawanImg from "../src/Assets/hero/palawan.png";
-import baguioImg from "../src/Assets/hero/baguio.png";
-import boracayImg from "../src/Assets/hero/boracay.png";
+import weatherImg from "../images/Category/weather.png";
+import flightImg from "../images/Category/plan.png";
+import eventImg from "../images/Category/event.png";
+import customizationImg from "../images/Category/customization.png";
+import cebuImg from "../images/Destinations/cebu.png";
+import manilaImg from "../images/Destinations/manila.png";
+import davaoImg from "../images/Destinations/davao.png";
+import userImg from "../images/hero/userIcon.png";
+import calenderImg from "../images/hero/calanderIcon.png";
+import HomeImg from "../images/hero/homeIcon.png";
+import errImg from "../images/hero/errowDown.png";
+import leftErrIcon from "../images/hero/errowLeft.png";
+import usersIcon from "../images/hero/usersIcon.png";
+import palawanImg from "../images/hero/palawan.png";
+import baguioImg from "../images/hero/baguio.png";
+import boracayImg from "../images/hero/boracay.png";
 
 export const service = {
   title: "We Offer Best Services",
@@ -98,8 +98,8 @@ export const sell = {
 
 export const mostPopularData = {
   title: "Most Popular",
-  leftErrowIcon: leftErrowIcon,
-  datas: [
+  leftErrIcon: leftErrIcon,
+  data: [
     {
       icon: palawanImg,
       people: 31,
@@ -122,10 +122,10 @@ export const mostPopularData = {
 };
 
 export const summaryData = {
-  datas: [
+  data: [
     {
       icon: HomeImg,
-      errowIcon: errowImg,
+      errIcon: errImg,
       title: "Accommodation",
       subtitle: "Aklan,Boracay",
     },
@@ -141,7 +141,7 @@ export const summaryData = {
     },
     {
       icon: userImg,
-      errowIcon: errowImg,
+      errIcon: errImg,
       title: "Guests",
       subtitle: "2Adults",
     },

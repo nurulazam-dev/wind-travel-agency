@@ -1,4 +1,3 @@
-import Footer from "../Components/Shared/Footer";
 import BookSteps from "../Components/Home/BookSteps";
 import Category from "../Components/Home/Category";
 import Destinations from "../Components/Home/Destinations";
@@ -8,15 +7,14 @@ import TrustedCo from "../Components/Home/TrustedCo";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Category />
       <Destinations />
       <BookSteps />
       <TrustedCo />
       <Subscribe />
-      <Footer />
-    </div>
+    </>
   );
 };
 
