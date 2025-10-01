@@ -4,12 +4,12 @@ const SummarySearch = () => {
   const { data } = summaryData;
 
   return (
-    <div className="bg-slate-200/50 rounded-xl m-2 p-5 flex items-center lg:w-full sm:w-75">
-      <div className="stats shadow">
+    <div className="bg-slate-200/50 rounded-xl m-2 p-4 flex items-center w-full">
+      <div className="shadow flex justify-between items-center w-full bg-slate-200/80 rounded-xl p-5">
         {data?.map((data) => {
           const { icon, errIcon, title, subtitle } = data;
           return (
-            <div className="stat flex items-center">
+            <div className="flex items-center gap-2">
               <div>
                 <img src={icon} alt="" />
               </div>
