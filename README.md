@@ -11,7 +11,7 @@
 
 ### Use Technology:
 
-`React.JS`, `React Router Dom`, `React Tailwind CSS`, `DaisyUI`.
+`React.JS`, `React Router Dom`, `Tailwind CSS`,
 
 <hr />
 
