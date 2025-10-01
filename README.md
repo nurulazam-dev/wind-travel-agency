@@ -17,7 +17,7 @@
 
 #### Project Demo
 
-![preview img](/src/Assets/project_homies_demo.png)
+![preview img](/src/Assets/images/project_homies_demo.png)
 
 - Use the command for run the project dev mood:
 
