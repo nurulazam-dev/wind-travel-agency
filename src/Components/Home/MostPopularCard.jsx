@@ -1,4 +1,5 @@
 import { mostPopularData } from "../../Assets/data/dataBank";
+import { FaUserFriends } from "react-icons/fa";
 
 const MostPopularCard = () => {
   const { title, leftErrIcon, data } = mostPopularData;
@@ -11,18 +12,18 @@ const MostPopularCard = () => {
       </div>
       <div className="flex flex-col gap-y-[30px] lg:flex-row lg:gap-x-[15px]">
         {data?.map((data) => {
-          const { icon, people, title, usersIcon } = data;
+          const { icon, people, title } = data;
           return (
-            <div class="card card-compact bg-base-100 shadow-xl mr-10">
-              <div class="card-body">
+            <div className="card card-compact bg-slate-200 rounded-md p-1 shadow-xl mr-6">
+              <div className="card-body">
                 <img src={icon} alt="Service" />
                 <div className="">
-                  <h6 className="font-bold text-[16px] my-2">
+                  <h6 className="font-bold text-[16px] my-1 text-center">
                     Trip To {title}
                   </h6>
-                  <div className="flex">
-                    <img src={usersIcon} alt="" />
-                    <p className="font-semibold text-[12px] mx-2 ">
+                  <div className="flex justify-around items-center">
+                    <FaUserFriends className="text-[16px] text-slate-700" />
+                    <p className="text-[12px] text-slate-600">
                       {people} people going
                     </p>
                   </div>
