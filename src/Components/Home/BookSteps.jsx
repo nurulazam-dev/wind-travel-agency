@@ -10,53 +10,53 @@ import heartImg from "../../Assets/images/BookSteps/heart.png";
 
 const BookSteps = () => {
   return (
-    <div className="section my-7 py-7">
+    <div className="section my-5 px-12">
       <div className="container mx-auto">
-        <div className="flex flex-col gap-y-[30px] lg:flex-row lg:gap-x-[15px] items-center">
-          <div className="lg:basis-1/2">
+        <div className="flex flex-col  lg:flex-row mx-5 justify-center items-center">
+          <div className="lg:basis-1/2 border border-red-500 text-slate-600">
             <p className="text-[18px] font-semibold">Easy and Fast</p>
-            <div className="text-[50px] font-bold">
+            <div className="text-[50px] font-bold leading-[60px] text-slate-800">
               <h3>Book your next trip</h3>
               <h3>In 3 easy steps</h3>
             </div>
-            <div className="flex my-3 py-3 items-center">
+            <div className="flex my-3 pt-3 items-center">
               <div>
                 <img src={destinationImg} alt="" />
               </div>
               <div className="mx-3 px-3">
                 <h4 className="font-bold">Choose Destination</h4>
-                <p>
+                <p className="text-[15px] leading-5">
                   Lorem ipsum dolor sit amet, consectetur <br /> adipiscing
                   elit. Urna, tortor tempus.{" "}
                 </p>
               </div>
             </div>
-            <div className="flex my-3 py-3 items-center">
+            <div className="flex my-3 pt-3 items-center">
               <div>
                 <img src={paymentImg} alt="" />
               </div>
               <div className="mx-3 px-3">
                 <h4 className="font-bold">Make Payment</h4>
-                <p>
+                <p className="text-[15px] leading-5">
                   Lorem ipsum dolor sit amet, consectetur <br /> adipiscing
                   elit. Urna, tortor tempus.{" "}
                 </p>
               </div>
             </div>
-            <div className="flex my-3 py-3 items-center">
+            <div className="flex my-3 pt-3 items-center">
               <div>
                 <img src={reachImg} alt="" />
               </div>
               <div className="mx-3 px-3">
                 <h4 className="font-bold">Reach Airport on Selected Date</h4>
-                <p>
+                <p className="text-[15px] leading-5">
                   Lorem ipsum dolor sit amet, consectetur <br /> adipiscing
                   elit. Urna, tortor tempus.{" "}
                 </p>
               </div>
             </div>
           </div>
-          <div className="lg:basis-1/2">
+          <div className="lg:basis-1/2 border border-green-500">
             <div class="card card-compact w-96 bg-base-100 shadow-xl">
               <div class="card-body">
                 <img src={boracayImg} alt="Baracay" />
