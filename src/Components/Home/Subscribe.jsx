@@ -1,13 +1,17 @@
 import { FaEnvelope } from "react-icons/fa6";
 import subsImg from "../../Assets/images/Icons/subscribe.png";
+import { BsFillSendFill } from "react-icons/bs";
 
 const Subscribe = () => {
   return (
     <div>
       <div
         style={{ background: `url(${subsImg})`, backgroundSize: "cover" }}
-        className="mx-20 py-12"
+        className="mx-20 py-12 relative"
       >
+        <div className="border rounded-full bg-yellow-600 text-white p-2 h-14 w-14 flex justify-center items-center absolute -right-[20px] top-[4%] translate-y-[-50%]">
+          <BsFillSendFill className="w-8 h-7" />
+        </div>
         <h2 className="text-[33px] font-bold text-center text-slate-600">
           Subscribe to get information, latest news and other
           <br /> interesting offers about WindTravel
