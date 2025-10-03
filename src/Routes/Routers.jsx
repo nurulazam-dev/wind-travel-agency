@@ -6,6 +6,7 @@ import NotFound from "../Pages/NotFound";
 import Home from "../Pages/Home";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
+import BookNow from "../Pages/BookNow";
 
 const Routers = () => {
   return (
@@ -14,6 +15,7 @@ const Routers = () => {
       <Route path="home" element={<Home />} />
       <Route path="/aboutUs" element={<AboutUs />} />
       <Route path="/premium" element={<Premium />} />
+      <Route path="/book-now" element={<BookNow />} />
       <Route path="/blogs" element={<Blog />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
