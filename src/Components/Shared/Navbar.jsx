@@ -9,6 +9,7 @@ const navLinks = [
   { to: "/aboutUs", label: "About Us" },
   { to: "/premium", label: "Premium" },
   { to: "/blogs", label: "Blogs" },
+  { to: "/login", label: "Login" },
 ];
 
 const languages = [
