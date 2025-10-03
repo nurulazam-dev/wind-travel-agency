@@ -4,6 +4,8 @@ import Premium from "../Pages/Premium";
 import Blog from "../Pages/Blog";
 import NotFound from "../Pages/NotFound";
 import Home from "../Pages/Home";
+import Register from "../Pages/Register";
+import Login from "../Pages/Login";
 
 const Routers = () => {
   return (
@@ -13,6 +15,8 @@ const Routers = () => {
       <Route path="/aboutUs" element={<AboutUs />} />
       <Route path="/premium" element={<Premium />} />
       <Route path="/blogs" element={<Blog />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>
