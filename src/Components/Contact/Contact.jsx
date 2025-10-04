@@ -94,9 +94,9 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 bg-gray-800 p-8 sm:p-10 rounded-2xl shadow-2xl border border-gray-700"
+            className="lg:col-span-2 bg-slate-100 p-8 sm:p-10 rounded-xl shadow-xl border border-gray-200"
           >
-            <h3 className="text-3xl font-bold text-white mb-6">
+            <h3 className="text-3xl font-bold text-gray-800 mb-6">
               Send Us a Message
             </h3>
 
@@ -151,7 +151,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   maxLength={500}
-                  rows="6"
+                  rows="4"
                   required
                   className="w-full p-4 bg-gray-700 text-white placeholder-gray-400 border border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition duration-200 resize-none"
                 ></textarea>
