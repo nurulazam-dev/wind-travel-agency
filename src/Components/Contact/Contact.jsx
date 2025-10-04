@@ -5,6 +5,7 @@ import { MdPhoneInTalk } from "react-icons/md";
 import { FaRegEnvelope, FaMapMarkerAlt, FaRegClock } from "react-icons/fa";
 import ContactCard from "./ContactCard";
 import ContactFormInput from "./ContactFormInput";
+import { RiLoader2Line } from "react-icons/ri";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -153,7 +154,7 @@ const Contact = () => {
                   maxLength={500}
                   rows="4"
                   required
-                  className="w-full p-4 bg-gray-700 text-white placeholder-gray-400 border border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition duration-200 resize-none"
+                  className="w-full p-4 bg-slate-50 text-gray-800 shadow-lg placeholder-gray-500 border border-gray-500 rounded-md focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition duration-200 resize-none"
                 ></textarea>
 
                 <motion.button
@@ -164,7 +165,7 @@ const Contact = () => {
                     boxShadow: "0 10px 20px rgba(252, 211, 77, 0.4)",
                   }}
                   whileTap={{ scale: 0.99 }}
-                  className={`w-full py-3 rounded-xl text-lg font-bold transition duration-300 transform flex items-center justify-center ${
+                  className={`w-full py-3 rounded-md text-lg font-bold transition duration-300 transform flex items-center justify-center ${
                     isSubmitting
                       ? "bg-yellow-800 cursor-not-allowed"
                       : "bg-yellow-500 text-gray-900 hover:bg-yellow-400"
@@ -172,26 +173,7 @@ const Contact = () => {
                 >
                   {isSubmitting ? (
                     <>
-                      <svg
-                        className="animate-spin h-5 w-5 mr-3"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        ></circle>
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                        ></path>
-                      </svg>
+                      <RiLoader2Line className="w-5 h-5 mr-2 animate-spin" />
                       Sending...
                     </>
                   ) : (
