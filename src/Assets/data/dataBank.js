@@ -185,3 +185,26 @@ export const testimonialsData = [
     avatar: "https://i.pravatar.cc/150?img=38",
   },
 ];
+
+export const faqData = [
+  {
+    q: "What is the cancellation policy for bookings?",
+    a: "Our standard policy allows free cancellation up to 48 hours after booking, provided the travel date is at least 30 days away. Cancellations closer to the departure date may incur fees based on hotel and airline policies. Please refer to your specific itinerary for detailed terms.",
+  },
+  {
+    q: "Do you offer travel insurance?",
+    a: "Yes, we strongly recommend purchasing travel insurance. We partner with top providers to offer comprehensive plans covering medical emergencies, trip interruptions, and baggage loss. You can easily add insurance during the 'Review & Pay' step of the booking process.",
+  },
+  {
+    q: "How can I contact customer support during my trip?",
+    a: "We offer 24/7 support for travelers. You can reach your dedicated WindTravels assistant via the mobile app, or call our global support line provided in your confirmation email. For urgent matters, the phone line is the fastest method.",
+  },
+  {
+    q: "Can I customize a travel package?",
+    a: "Absolutely! While we offer pre-designed packages, our Premium service specializes in crafting bespoke itineraries tailored to your specific interests, budget, and desired pace. Contact our planning experts to begin designing your custom trip.",
+  },
+  {
+    q: "What payment methods do you accept?",
+    a: "We accept all major credit cards (Visa, Mastercard, Amex), PayPal, and bank transfers. All transactions are secured with industry-leading encryption to ensure your data is safe.",
+  },
+];
