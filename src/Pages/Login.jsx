@@ -5,6 +5,7 @@ import { FiLogIn } from "react-icons/fi";
 import { FaRegEnvelope } from "react-icons/fa";
 import { MdOutlineLock } from "react-icons/md";
 import SocialLogin from "../Components/Shared/SocialLogin";
+import { RiLoader2Line } from "react-icons/ri";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -89,7 +90,7 @@ const Login = () => {
           >
             {isLoading ? (
               <>
-                <FiLogIn className="w-5 h-5 mr-2 animate-spin" />
+                <RiLoader2Line className="w-5 h-5 mr-2 animate-spin" />
                 Logging in...
               </>
             ) : (
