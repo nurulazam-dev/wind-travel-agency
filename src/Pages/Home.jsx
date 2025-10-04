@@ -1,6 +1,6 @@
+import Contact from "../Components/Contact/Contact";
 import BookSteps from "../Components/Home/BookSteps";
 import Category from "../Components/Home/Category";
-import Contact from "../Components/Home/Contact";
 import Destinations from "../Components/Home/Destinations";
 import FAQ from "../Components/Home/FAQ/FAQ";
 import Hero from "../Components/Home/Hero";
