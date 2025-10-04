@@ -154,20 +154,34 @@ export const testimonialsData = [
       "WindTravels planned our dream honeymoon to Palawan. Every detail, from the private island transfer to the secluded resorts, was flawless. Truly world-class service!",
     name: "Lei Britz",
     title: "Laguna, Philippines",
-    avatar: "https://placehold.co/100x100/A3E635/1F2937?text=LB", // Placeholder for Lei Britz
+    avatar: "https://i.pravatar.cc/150?img=31",
   },
   {
     quote:
       "The Premium package was worth every penny. Our dedicated travel assistant saved us hours of planning and gave us local insights we could never have found ourselves. Five stars!",
     name: "Sarah Chen",
     title: "New York, USA",
-    avatar: "https://placehold.co/100x100/FACC15/1F2937?text=SC", // Placeholder for Sarah Chen
+    avatar: "https://i.pravatar.cc/150?img=32",
   },
   {
     quote:
       "I used WindTravels for a business trip to Tokyo. Fast, efficient, and they handled all my complex itinerary changes without a hitch. Highly recommend to any executive.",
     name: "Javier Lopez",
     title: "Madrid, Spain",
-    avatar: "https://placehold.co/100x100/3B82F6/1F2937?text=JL", // Placeholder for Javier Lopez
+    avatar: "https://i.pravatar.cc/150?img=33",
+  },
+  {
+    quote:
+      "As a frequent traveler, I appreciate the attention to detail that WindTravels provides. They truly understand the needs of their clients. Exceptional service every time.",
+    name: "Michael Smith",
+    title: "Sydney, Australia",
+    avatar: "https://i.pravatar.cc/150?img=37",
+  },
+  {
+    quote:
+      "WindTravels made our family vacation to Europe stress-free and enjoyable. Their kid-friendly recommendations were spot on! Awesome experience.",
+    name: "Anita Kapoor",
+    title: "Mumbai, India",
+    avatar: "https://i.pravatar.cc/150?img=38",
   },
 ];
