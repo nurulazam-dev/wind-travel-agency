@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
+  FaCheck,
   FaChevronLeft,
   FaChevronRight,
   FaMapMarkerAlt,
@@ -10,45 +11,29 @@ import { FiCalendar, FiUsers } from "react-icons/fi";
 import { BsCreditCard2Back } from "react-icons/bs";
 import { RiLoader2Line } from "react-icons/ri";
 
-const Check = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
-const CreditCard = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect width="22" height="16" x="1" y="4" rx="2" />
-    <line x1="1" x2="23" y1="10" y2="10" />
-  </svg>
-);
-
 const StepIndicator = ({ currentStep }) => {
   const steps = [
-    { name: "Trip Details", icon: <FaMapMarkerAlt />, step: 1 },
-    { name: "Traveler Info", icon: <FiUsers />, step: 2 },
-    { name: "Review & Pay", icon: <BsCreditCard2Back />, step: 3 },
+    {
+      name: "Trip Details",
+      icon: (
+        <FaMapMarkerAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      ),
+      step: 1,
+    },
+    {
+      name: "Traveler Info",
+      icon: (
+        <FiUsers className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      ),
+      step: 2,
+    },
+    {
+      name: "Review & Pay",
+      icon: (
+        <BsCreditCard2Back className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      ),
+      step: 3,
+    },
   ];
 
   return (
@@ -65,9 +50,9 @@ const StepIndicator = ({ currentStep }) => {
             }`}
           >
             {currentStep > step.step ? (
-              <Check className="w-4 h-4" />
+              <FaCheck className="w-4 h-4" />
             ) : (
-              step.step
+              step?.step
             )}
           </div>
           <span
@@ -107,7 +92,7 @@ const CustomInput = ({
     whileFocus={{ scale: 1.01, boxShadow: "0 0 0 2px #F59E0B" }}
     className="relative rounded-lg overflow-hidden border border-gray-700 focus-within:ring-2 focus-within:ring-yellow-500 transition duration-300"
   >
-    <Icon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+    {Icon}
     <input
       type={type}
       placeholder={placeholder}
@@ -132,14 +117,18 @@ const Step1Details = ({ formData, handleChange }) => (
     <h2 className="text-2xl font-bold text-white mb-4">1. Select Your Trip</h2>
 
     <CustomInput
-      Icon={FaMapMarkerAlt}
+      Icon={
+        <FaMapMarkerAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      }
       placeholder="Destination (e.g., Kyoto, Japan)"
       value={formData.destination}
       onChange={(e) => handleChange("destination", e.target.value)}
     />
 
     <CustomInput
-      Icon={FiCalendar}
+      Icon={
+        <FiCalendar className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      }
       placeholder="Start Date"
       type="date"
       value={formData.startDate}
@@ -147,7 +136,9 @@ const Step1Details = ({ formData, handleChange }) => (
     />
 
     <CustomInput
-      Icon={FiCalendar}
+      Icon={
+        <FiCalendar className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      }
       placeholder="End Date"
       type="date"
       value={formData.endDate}
@@ -155,7 +146,9 @@ const Step1Details = ({ formData, handleChange }) => (
     />
 
     <CustomInput
-      Icon={FiUsers}
+      Icon={
+        <FiUsers className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      }
       placeholder="Number of Travelers"
       type="number"
       value={formData.travelers}
@@ -177,14 +170,18 @@ const Step2Traveler = ({ formData, handleChange }) => (
     </h2>
 
     <CustomInput
-      Icon={<FiUsers />}
+      Icon={
+        <FiUsers className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      }
       placeholder="Primary Traveler Full Name"
       value={formData.fullName}
       onChange={(e) => handleChange("fullName", e.target.value)}
     />
 
     <CustomInput
-      Icon={<FaPhoneAlt />}
+      Icon={
+        <FaPhoneAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      }
       placeholder="Contact Phone Number"
       type="tel"
       value={formData.phone}
@@ -192,7 +189,9 @@ const Step2Traveler = ({ formData, handleChange }) => (
     />
 
     <CustomInput
-      Icon={<FaMapMarkerAlt />}
+      Icon={
+        <FaMapMarkerAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+      }
       placeholder="Billing Address (Street, City, ZIP)"
       value={formData.address}
       onChange={(e) => handleChange("address", e.target.value)}
@@ -279,7 +278,7 @@ const Step3Review = ({ formData }) => {
 
       {/* Payment Input (Mock) */}
       <CustomInput
-        Icon={CreditCard}
+        Icon={BsCreditCard2Back}
         placeholder="Credit Card Number (Mock)"
         required={false}
         type="text"
@@ -382,7 +381,7 @@ const BookNow = () => {
           transition={{ duration: 0.5, type: "spring", damping: 15 }}
           className="w-full max-w-md p-10 bg-gray-800 rounded-3xl shadow-2xl border border-gray-700 text-center"
         >
-          <Check className="w-16 h-16 mx-auto text-yellow-500 mb-6" />
+          <FaCheck className="w-16 h-16 mx-auto text-yellow-500 mb-6" />
           <h1 className="text-3xl font-extrabold text-white mb-3">
             Booking Confirmed!
           </h1>
@@ -476,7 +475,7 @@ const BookNow = () => {
               <>
                 {currentStep < 3 ? "Next Step" : "Confirm & Pay"}
                 {currentStep === 3 ? (
-                  <CreditCard className="w-5 h-5 ml-2" />
+                  <BsCreditCard2Back className="w-5 h-5 ml-2" />
                 ) : (
                   <FaChevronRight className="w-5 h-5 ml-2" />
                 )}
