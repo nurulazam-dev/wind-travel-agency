@@ -1,120 +1,19 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaGlobeAsia } from "react-icons/fa";
-
-const Anchor = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="5" r="3" />
-    <line x1="12" x2="12" y1="22" y2="8" />
-    <path d="M5 12H2a10 10 0 0 0 20 0h-3" />
-  </svg>
-);
-const Zap = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-  </svg>
-);
-const Shield = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-  </svg>
-);
-const Heart = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3.15.49-4.5 2-1.35-1.51-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-  </svg>
-);
-const Compass = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="10" />
-    <path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z" />
-  </svg>
-);
-const Users = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-    <circle cx="9" cy="7" r="4" />
-    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-  </svg>
-);
+import { FaAnchor, FaRegCompass, FaRegHeart } from "react-icons/fa";
+import { FiZap } from "react-icons/fi";
+import { IoShieldOutline } from "react-icons/io5";
 
 const missionVision = [
   {
     title: "Our Mission",
-    icon: Anchor,
+    icon: <FaAnchor className="w-10 h-10 text-yellow-500 mb-4" />,
     description:
       "To connect people with the world's most incredible destinations through seamless booking, expert guidance, and personalized itineraries.",
   },
   {
     title: "Our Vision",
-    icon: Zap,
+    icon: <FiZap className="w-10 h-10 text-yellow-500 mb-4" />,
     description:
       "To be the most trusted and innovative travel platform, inspiring a billion journeys and promoting sustainable, responsible tourism worldwide.",
   },
@@ -123,19 +22,19 @@ const missionVision = [
 const keyDifferences = [
   {
     title: "Expert Local Guides",
-    icon: Compass,
+    icon: <FaRegCompass className="w-8 h-8 text-yellow-500 mb-3" />,
     description:
       "We partner only with verified local experts who offer authentic, immersive experiences.",
   },
   {
     title: "Price Match Guarantee",
-    icon: Shield,
+    icon: <IoShieldOutline className="w-8 h-8 text-yellow-500 mb-3" />,
     description:
       "Find a lower price? We'll match it and give you an extra discount on your next trip.",
   },
   {
     title: "Customer-First Philosophy",
-    icon: Heart,
+    icon: <FaRegHeart className="w-8 h-8 text-yellow-500 mb-3" />,
     description:
       "Our dedicated support team works 24/7 to ensure your trip is perfect from start to finish.",
   },
@@ -165,8 +64,7 @@ const AboutUs = () => {
         variants={sectionVariants}
         className="max-w-6xl mx-auto py-6 text-center border-b border-gray-800"
       >
-        <FaGlobeAsia className="w-16 h-16 mx-auto text-yellow-400 mb-4 animate-spin-slow" />
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
+        <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-tight">
           Your Journey, Elevated.
         </h1>
         <h2 className="text-xl md:text-2xl font-medium text-yellow-500 mt-4">
@@ -182,7 +80,7 @@ const AboutUs = () => {
       </motion.div>
 
       {/* 2. Mission and Vision Section */}
-      <div className="max-w-6xl mx-auto mt-16">
+      <div className="max-w-6xl mx-auto mt-4">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -196,18 +94,22 @@ const AboutUs = () => {
               variants={itemVariants}
               className="p-8 bg-gray-900 rounded-2xl shadow-xl border border-gray-700 hover:shadow-yellow-500/10 transition duration-300"
             >
-              <item.icon className="w-10 h-10 text-yellow-500 mb-4" />
-              <h3 className="text-3xl font-bold text-white mb-3">
-                {item.title}
-              </h3>
-              <p className="text-gray-400 text-lg">{item.description}</p>
+              <div className="flex justify-center items-center gap-3">
+                {item?.icon}
+                <h3 className="text-3xl font-bold text-white mb-3">
+                  {item?.title}
+                </h3>
+              </div>
+              <p className="text-gray-400 text-lg text-justify">
+                {item?.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>
       </div>
 
       {/* 3. The WindTravels Difference */}
-      <div className="max-w-6xl mx-auto mt-20 text-center">
+      <div className="max-w-6xl mx-auto mt-12 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -235,11 +137,11 @@ const AboutUs = () => {
               }}
               className="p-6 bg-gray-900 rounded-xl shadow-lg border-t-4 border-yellow-500/50 hover:border-yellow-500 transition duration-300 transform flex flex-col items-center text-center"
             >
-              <diff.icon className="w-8 h-8 text-yellow-500 mb-3" />
+              {diff?.icon}
               <h3 className="text-xl font-bold text-white mb-2">
-                {diff.title}
+                {diff?.title}
               </h3>
-              <p className="text-gray-400 text-sm">{diff.description}</p>
+              <p className="text-gray-400 text-sm">{diff?.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -251,7 +153,7 @@ const AboutUs = () => {
         whileInView="visible"
         variants={sectionVariants}
         viewport={{ once: true, amount: 0.4 }}
-        className="max-w-4xl mx-auto mt-20 p-8 bg-gray-900 rounded-2xl shadow-2xl border border-gray-700"
+        className="max-w-6xl mx-auto mt-10 p-8 bg-gray-900 rounded-2xl shadow-2xl border border-gray-700"
       >
         <h2 className="text-3xl font-extrabold text-white mb-4">
           Our Journey So Far
@@ -308,9 +210,8 @@ const AboutUs = () => {
         variants={sectionVariants}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="max-w-6xl mx-auto mt-20 py-12 text-center border-t border-gray-700"
+        className="max-w-6xl mx-auto py-8 text-center border-gray-700"
       >
-        <Users className="w-10 h-10 mx-auto text-yellow-500 mb-4" />
         <h3 className="text-3xl font-extrabold text-white mb-4">
           Ready to Meet the Experts?
         </h3>
