@@ -1,77 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+} from "react-icons/fa";
+import { FiCalendar, FiUsers } from "react-icons/fi";
+import { BsCreditCard2Back } from "react-icons/bs";
+import { RiLoader2Line } from "react-icons/ri";
 
-const Plane = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M17.8 17.8 10 12V3h3l7 6-2 2h3zM3 12h5v4H3z" />
-  </svg>
-);
-const Users = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-    <circle cx="9" cy="7" r="4" />
-    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-  </svg>
-);
-const Calendar = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-    <line x1="16" x2="16" y1="2" y2="6" />
-    <line x1="8" x2="8" y1="2" y2="6" />
-    <line x1="3" x2="21" y1="10" y2="10" />
-  </svg>
-);
-const MapPin = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M12 21.7c-3.1 0-5.6-2.5-5.6-5.6 0-3.9 5.6-11.4 5.6-11.4s5.6 7.5 5.6 11.4c0 3.1-2.5 5.6-5.6 5.6z" />
-    <circle cx="12" cy="12" r="3" />
-  </svg>
-);
 const Check = (props) => (
   <svg
     {...props}
@@ -86,22 +24,6 @@ const Check = (props) => (
     strokeLinejoin="round"
   >
     <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
-const ChevronLeft = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="15 18 9 12 15 6" />
   </svg>
 );
 const CreditCard = (props) => (
@@ -124,9 +46,9 @@ const CreditCard = (props) => (
 
 const StepIndicator = ({ currentStep }) => {
   const steps = [
-    { name: "Trip Details", icon: MapPin, step: 1 },
-    { name: "Traveler Info", icon: Users, step: 2 },
-    { name: "Review & Pay", icon: CreditCard, step: 3 },
+    { name: "Trip Details", icon: <FaMapMarkerAlt />, step: 1 },
+    { name: "Traveler Info", icon: <FiUsers />, step: 2 },
+    { name: "Review & Pay", icon: <BsCreditCard2Back />, step: 3 },
   ];
 
   return (
@@ -210,14 +132,14 @@ const Step1Details = ({ formData, handleChange }) => (
     <h2 className="text-2xl font-bold text-white mb-4">1. Select Your Trip</h2>
 
     <CustomInput
-      Icon={MapPin}
+      Icon={FaMapMarkerAlt}
       placeholder="Destination (e.g., Kyoto, Japan)"
       value={formData.destination}
       onChange={(e) => handleChange("destination", e.target.value)}
     />
 
     <CustomInput
-      Icon={Calendar}
+      Icon={FiCalendar}
       placeholder="Start Date"
       type="date"
       value={formData.startDate}
@@ -225,7 +147,7 @@ const Step1Details = ({ formData, handleChange }) => (
     />
 
     <CustomInput
-      Icon={Calendar}
+      Icon={FiCalendar}
       placeholder="End Date"
       type="date"
       value={formData.endDate}
@@ -233,7 +155,7 @@ const Step1Details = ({ formData, handleChange }) => (
     />
 
     <CustomInput
-      Icon={Users}
+      Icon={FiUsers}
       placeholder="Number of Travelers"
       type="number"
       value={formData.travelers}
@@ -255,14 +177,14 @@ const Step2Traveler = ({ formData, handleChange }) => (
     </h2>
 
     <CustomInput
-      Icon={Users}
+      Icon={<FiUsers />}
       placeholder="Primary Traveler Full Name"
       value={formData.fullName}
       onChange={(e) => handleChange("fullName", e.target.value)}
     />
 
     <CustomInput
-      Icon={MapPin}
+      Icon={<FaPhoneAlt />}
       placeholder="Contact Phone Number"
       type="tel"
       value={formData.phone}
@@ -270,7 +192,7 @@ const Step2Traveler = ({ formData, handleChange }) => (
     />
 
     <CustomInput
-      Icon={MapPin} // Reusing MapPin for address simplicity
+      Icon={<FaMapMarkerAlt />}
       placeholder="Billing Address (Street, City, ZIP)"
       value={formData.address}
       onChange={(e) => handleChange("address", e.target.value)}
@@ -400,7 +322,6 @@ const BookNow = () => {
   };
 
   const handleNext = () => {
-    // Basic validation for current step before moving on (In a real app, this would be robust)
     if (currentStep === 1) {
       if (
         !formData.destination ||
@@ -431,7 +352,6 @@ const BookNow = () => {
 
   const handleFinalBooking = () => {
     setIsLoading(true);
-    // Simulate a final payment/booking API call
     setTimeout(() => {
       setIsLoading(false);
       setIsBooked(true);
@@ -496,13 +416,9 @@ const BookNow = () => {
         transition={{ duration: 0.6, type: "spring", damping: 15 }}
         className="w-full max-w-xl p-8 sm:p-10 bg-gray-800 rounded-3xl shadow-2xl border border-gray-700"
       >
-        {/* Header */}
-        <div className="text-center mb-10">
-          <Plane className="w-10 h-10 mx-auto text-yellow-500 mb-3" />
-          <h1 className="text-3xl font-extrabold text-white">
-            Book Your Next WindTravels Trip
-          </h1>
-        </div>
+        <h1 className="text-3xl font-extrabold text-white text-center mb-5">
+          Book Your Next Trip
+        </h1>
 
         {/* Progress Indicator */}
         <StepIndicator currentStep={currentStep} />
@@ -532,7 +448,7 @@ const BookNow = () => {
                 : "bg-gray-600 text-white hover:bg-gray-500"
             }`}
           >
-            <ChevronLeft className="w-5 h-5 mr-2" />
+            <FaChevronLeft className="mr-2" />
             Back
           </motion.button>
 
@@ -553,26 +469,7 @@ const BookNow = () => {
           >
             {isLoading ? (
               <>
-                <svg
-                  className="animate-spin h-5 w-5 mr-3"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                  ></path>
-                </svg>
+                <RiLoader2Line className="w-5 h-5 mr-2 animate-spin" />
                 {currentStep === 3 ? "Processing Payment..." : "Validating..."}
               </>
             ) : (
@@ -581,7 +478,7 @@ const BookNow = () => {
                 {currentStep === 3 ? (
                   <CreditCard className="w-5 h-5 ml-2" />
                 ) : (
-                  <Plane className="w-5 h-5 ml-2" />
+                  <FaChevronRight className="w-5 h-5 ml-2" />
                 )}
               </>
             )}
