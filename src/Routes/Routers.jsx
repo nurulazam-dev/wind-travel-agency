@@ -7,6 +7,7 @@ import Home from "../Pages/Home";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import BookNow from "../Pages/BookNow";
+import Contact from "../Components/Contact/Contact";
 
 const Routers = () => {
   return (
@@ -14,6 +15,7 @@ const Routers = () => {
       <Route path="/" element={<Home />} />
       <Route path="home" element={<Home />} />
       <Route path="/aboutUs" element={<AboutUs />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/premium" element={<Premium />} />
       <Route path="/book-now" element={<BookNow />} />
       <Route path="/blogs" element={<Blog />} />
