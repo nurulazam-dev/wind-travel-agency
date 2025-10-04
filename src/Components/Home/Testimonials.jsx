@@ -1,63 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
-const ChevronUp = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="18 15 12 9 6 15" />
-  </svg>
-);
-const ChevronDown = (props) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="6 9 12 15 18 9" />
-  </svg>
-);
-
-// Mock Testimonial Data
-const testimonials = [
-  {
-    quote:
-      "WindTravels planned our dream honeymoon to Palawan. Every detail, from the private island transfer to the secluded resorts, was flawless. Truly world-class service!",
-    name: "Lei Britz",
-    title: "Laguna, Philippines",
-    avatar: "https://placehold.co/100x100/A3E635/1F2937?text=LB", // Placeholder for Lei Britz
-  },
-  {
-    quote:
-      "The Premium package was worth every penny. Our dedicated travel assistant saved us hours of planning and gave us local insights we could never have found ourselves. Five stars!",
-    name: "Sarah Chen",
-    title: "New York, USA",
-    avatar: "https://placehold.co/100x100/FACC15/1F2937?text=SC", // Placeholder for Sarah Chen
-  },
-  {
-    quote:
-      "I used WindTravels for a business trip to Tokyo. Fast, efficient, and they handled all my complex itinerary changes without a hitch. Highly recommend to any executive.",
-    name: "Javier Lopez",
-    title: "Madrid, Spain",
-    avatar: "https://placehold.co/100x100/3B82F6/1F2937?text=JL", // Placeholder for Javier Lopez
-  },
-];
+import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { testimonialsData } from "../../Assets/data/dataBank";
 
 const TestimonialCard = ({ testimonial, isVisible, style }) => {
   if (!isVisible) return null;
@@ -67,7 +11,7 @@ const TestimonialCard = ({ testimonial, isVisible, style }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="absolute w-full p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-300 transform"
+      className="absolute w-full p-8 pb-4 rounded-2xl shadow-xl border border-gray-100 transition-all duration-300 transform"
       style={{
         ...style,
         backgroundColor: "white",
@@ -75,13 +19,13 @@ const TestimonialCard = ({ testimonial, isVisible, style }) => {
       }}
     >
       {/* Quote Text */}
-      <p className="text-lg leading-relaxed mb-4 italic">
+      <p className="text-lg leading-7 text-justify mb-4 italic">
         "{testimonial.quote}"
       </p>
 
       {/* Author Info */}
       <div>
-        <p className="text-xl font-bold mb-1">{testimonial.name}</p>
+        <p className="text-xl font-bold">{testimonial.name}</p>
         <p className="text-sm text-gray-500">{testimonial.title}</p>
       </div>
     </motion.div>
@@ -92,17 +36,17 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialsData?.length);
   };
 
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+      prevIndex === 0 ? testimonialsData?.length - 1 : prevIndex - 1
     );
   };
 
-  const currentTestimonial = testimonials[currentIndex];
-  const nextIndex = (currentIndex + 1) % testimonials.length;
+  const currentTestimonial = testimonialsData[currentIndex];
+  const nextIndex = (currentIndex + 1) % testimonialsData?.length;
 
   return (
     <div className="py-20 bg-gray-900 font-inter min-h-screen flex items-center justify-center p-4">
@@ -122,7 +66,7 @@ const Testimonials = () => {
 
           {/* Navigation Dots (Styled like the image) */}
           <div className="flex space-x-2 mt-4">
-            {testimonials.map((_, index) => (
+            {testimonialsData?.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
@@ -143,7 +87,7 @@ const Testimonials = () => {
           <div className="w-full h-full relative max-w-md">
             {/* Next card subtly visible */}
             <TestimonialCard
-              testimonial={testimonials[nextIndex]}
+              testimonial={testimonialsData[nextIndex]}
               isVisible={true}
               style={{
                 zIndex: 5,
@@ -176,7 +120,7 @@ const Testimonials = () => {
             </div>
 
             {/* Navigation Arrows */}
-            <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2 z-30">
+            <div className="absolute right-2 top-[40%] transform -translate-y-1/2 flex flex-col space-y-2 z-30">
               <motion.button
                 onClick={prevTestimonial}
                 whileHover={{ scale: 1.1, backgroundColor: "#D97706" }}
@@ -184,7 +128,7 @@ const Testimonials = () => {
                 className="p-2 bg-yellow-500 text-gray-900 rounded-full shadow-lg"
                 aria-label="Previous Testimonial"
               >
-                <ChevronUp className="w-5 h-5" />
+                <FaChevronUp className="w-5 h-5" />
               </motion.button>
               <motion.button
                 onClick={nextTestimonial}
@@ -193,7 +137,7 @@ const Testimonials = () => {
                 className="p-2 bg-yellow-500 text-gray-900 rounded-full shadow-lg"
                 aria-label="Next Testimonial"
               >
-                <ChevronDown className="w-5 h-5" />
+                <FaChevronDown className="w-5 h-5" />
               </motion.button>
             </div>
           </div>

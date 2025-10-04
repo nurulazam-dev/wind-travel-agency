@@ -147,3 +147,27 @@ export const summaryData = {
     },
   ],
 };
+
+export const testimonialsData = [
+  {
+    quote:
+      "WindTravels planned our dream honeymoon to Palawan. Every detail, from the private island transfer to the secluded resorts, was flawless. Truly world-class service!",
+    name: "Lei Britz",
+    title: "Laguna, Philippines",
+    avatar: "https://placehold.co/100x100/A3E635/1F2937?text=LB", // Placeholder for Lei Britz
+  },
+  {
+    quote:
+      "The Premium package was worth every penny. Our dedicated travel assistant saved us hours of planning and gave us local insights we could never have found ourselves. Five stars!",
+    name: "Sarah Chen",
+    title: "New York, USA",
+    avatar: "https://placehold.co/100x100/FACC15/1F2937?text=SC", // Placeholder for Sarah Chen
+  },
+  {
+    quote:
+      "I used WindTravels for a business trip to Tokyo. Fast, efficient, and they handled all my complex itinerary changes without a hitch. Highly recommend to any executive.",
+    name: "Javier Lopez",
+    title: "Madrid, Spain",
+    avatar: "https://placehold.co/100x100/3B82F6/1F2937?text=JL", // Placeholder for Javier Lopez
+  },
+];
