@@ -6,7 +6,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
     <motion.div className="border-b border-gray-700 overflow-hidden cursor-pointer">
       <button
         onClick={onClick}
-        className="flex justify-between items-center w-full py-4 px-6 text-left hover:bg-gray-700 transition duration-300"
+        className="flex justify-between items-center w-full py-4 px-6 text-left bg-gray-800 transition duration-300"
       >
         <span
           className={`text-lg font-semibold ${
@@ -27,7 +27,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
         initial={false}
         animate={{ height: isOpen ? "auto" : 0 }}
         transition={{ duration: 0.3 }}
-        className="px-6 text-gray-400 pb-5"
+        className="px-6 text-gray-700 pb-[2px] overflow-hidden"
         style={{ height: isOpen ? "auto" : 0 }}
       >
         <div className="py-2">
