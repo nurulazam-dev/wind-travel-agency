@@ -4,26 +4,7 @@ import { FiSend } from "react-icons/fi";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaRegEnvelope, FaMapMarkerAlt, FaRegClock } from "react-icons/fa";
 import ContactCard from "./ContactCard";
-
-// Form Input Component
-const FormInput = ({
-  type,
-  placeholder,
-  name,
-  value,
-  onChange,
-  required = true,
-}) => (
-  <input
-    type={type}
-    placeholder={placeholder}
-    name={name}
-    value={value}
-    onChange={onChange}
-    required={required}
-    className="w-full p-4 bg-gray-700 text-white placeholder-gray-400 border border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition duration-200"
-  />
-);
+import ContactFormInput from "./ContactFormInput";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -142,14 +123,14 @@ const Contact = () => {
                 exit={{ opacity: 0 }}
               >
                 <div className="grid sm:grid-cols-2 gap-6">
-                  <FormInput
+                  <ContactFormInput
                     type="text"
                     placeholder="Your Full Name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                   />
-                  <FormInput
+                  <ContactFormInput
                     type="email"
                     placeholder="Your Email Address"
                     name="email"
@@ -157,7 +138,7 @@ const Contact = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <FormInput
+                <ContactFormInput
                   type="text"
                   placeholder="Subject or Trip Inquiry Reference"
                   name="subject"
