@@ -3,7 +3,7 @@ import Category from "../Components/Home/Category";
 import Destinations from "../Components/Home/Destinations";
 import Hero from "../Components/Home/Hero";
 import Subscribe from "../Components/Home/Subscribe";
-import Testimonials from "../Components/Home/Testimonials";
+import Testimonials from "../Components/Home/Testimonials/Testimonials";
 import TrustedCo from "../Components/Home/TrustedCo";
 
 const Home = () => {
