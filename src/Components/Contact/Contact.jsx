@@ -34,8 +34,7 @@ const Contact = () => {
 
   return (
     <div className="py-20 font-inter min-h-screen p-4 sm:p-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,7 +50,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left side - Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
