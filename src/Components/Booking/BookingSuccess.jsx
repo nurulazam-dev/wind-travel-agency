@@ -3,12 +3,12 @@ import { FaCheck } from "react-icons/fa";
 
 const BookingSuccess = ({ formData }) => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4 font-inter">
+    <div className="min-h-screen flex items-center justify-center bg-gray-800 p-4 font-inter">
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, type: "spring", damping: 15 }}
-        className="w-full max-w-md p-10 bg-gray-800 rounded-3xl shadow-2xl border border-gray-700 text-center"
+        className="w-full max-w-md p-10 bg-gray-900 rounded-3xl shadow-2xl border border-gray-700 text-center"
       >
         <FaCheck className="w-16 h-16 mx-auto text-yellow-500 mb-6" />
         <h1 className="text-3xl font-extrabold text-white mb-3">

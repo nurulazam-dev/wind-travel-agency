@@ -83,12 +83,12 @@ const BookNow = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4 sm:p-8 font-inter">
+    <div className="min-h-screen flex items-center justify-center bg-gray-800 p-4 sm:p-8 font-inter">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, type: "spring", damping: 15 }}
-        className="w-full max-w-xl p-8 sm:p-10 bg-gray-800 rounded-3xl shadow-2xl border border-gray-700"
+        className="w-full max-w-lg p-8 sm:p-10 bg-gray-900 rounded-xl shadow-xl border border-gray-700"
       >
         <h1 className="text-3xl font-extrabold text-white text-center mb-5">
           Book Your Next Trip
