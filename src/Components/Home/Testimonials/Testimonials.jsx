@@ -21,22 +21,22 @@ const Testimonials = () => {
   const nextIndex = (currentIndex + 1) % testimonialsData?.length;
 
   return (
-    <div className="py-20 bg-gray-900 font-inter min-h-screen flex items-center justify-center p-4">
+    <div className="py-20 pb-0 font-inter flex items-center justify-center p-4">
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto w-full">
-        {/* Left Section: Headings and Navigation Dots */}
+        {/* Left side: Headings and Navigation Dots */}
         <div className="md:sticky md:top-20 h-full md:h-auto">
-          <p className="text-sm uppercase tracking-widest text-yellow-500 font-semibold mb-2">
+          <p className="text-sm uppercase tracking-widest text-slate-500 font-semibold mb-2">
             TESTIMONIALS
           </p>
-          <h2 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-8">
-            What People Say About Us.
+          <h2 className="text-4xl lg:text-6xl font-bold text-slate-800 leading-tight mb-8">
+            What People Say <br /> About Us.
           </h2>
-          <p className="text-gray-400 max-w-md mb-8">
+          <p className="text-slate-600 max-w-md mb-8">
             Hear from our satisfied travelers who trusted WindTravels to create
             their perfect journey.
           </p>
 
-          {/* Navigation Dots (Styled like the image) */}
+          {/* Navigation Dots */}
           <div className="flex space-x-2 mt-4">
             {testimonialsData?.map((_, index) => (
               <button
@@ -53,9 +53,9 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Right Section: Testimonial Cards and Arrows */}
-        <div className="relative h-[450px] flex items-center">
-          {/* Testimonial Stacking Area */}
+        {/* Right side: Testimonial Cards and Arrows */}
+        <div className="relative h-[320px] flex items-center">
+          {/* Testimonial */}
           <div className="w-full h-full relative max-w-md">
             {/* Next card subtly visible */}
             <TestimonialCard
@@ -80,19 +80,15 @@ const Testimonials = () => {
             {/* Author Avatar  */}
             <div className="absolute -top-12 left-10 w-20 h-20 rounded-full overflow-hidden border-4 border-yellow-500 z-20">
               <img
-                src={currentTestimonial.avatar}
-                alt={currentTestimonial.name}
+                src={currentTestimonial?.avatar}
+                alt={currentTestimonial?.name}
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src =
-                    "https://placehold.co/100x100/1F2937/FACC15?text=WT";
-                }}
+                loading="lazy"
               />
             </div>
 
             {/* Navigation Arrows */}
-            <div className="absolute right-2 top-[40%] transform -translate-y-1/2 flex flex-col space-y-2 z-30">
+            <div className="absolute right-2 top-[55%] transform -translate-y-1/2 flex flex-col space-y-2 z-30">
               <motion.button
                 onClick={prevTestimonial}
                 whileHover={{ scale: 1.1, backgroundColor: "#D97706" }}
