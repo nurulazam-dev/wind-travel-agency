@@ -192,10 +192,6 @@ export const faqData = [
     a: "Our standard policy allows free cancellation up to 48 hours after booking, provided the travel date is at least 30 days away. Cancellations closer to the departure date may incur fees based on hotel and airline policies. Please refer to your specific itinerary for detailed terms.",
   },
   {
-    q: "Do you offer travel insurance?",
-    a: "Yes, we strongly recommend purchasing travel insurance. We partner with top providers to offer comprehensive plans covering medical emergencies, trip interruptions, and baggage loss. You can easily add insurance during the 'Review & Pay' step of the booking process.",
-  },
-  {
     q: "How can I contact customer support during my trip?",
     a: "We offer 24/7 support for travelers. You can reach your dedicated WindTravels assistant via the mobile app, or call our global support line provided in your confirmation email. For urgent matters, the phone line is the fastest method.",
   },

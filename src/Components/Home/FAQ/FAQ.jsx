@@ -3,6 +3,7 @@ import { faqData } from "../../../Assets/data/dataBank";
 import AccordionItem from "./AccordionItem";
 import { motion } from "framer-motion";
 import { BiSupport } from "react-icons/bi";
+import faqImg from "../../../Assets/images/faqImg.jpg";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -17,7 +18,7 @@ const FAQ = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-5xl mx-auto"
+        className="max-w-6xl mx-auto"
       >
         {/* Header Section */}
         <div className="text-center mb-6 max-w-2xl mx-auto">
@@ -30,17 +31,22 @@ const FAQ = () => {
           </p>
         </div>
 
-        {/* FAQ Accordion List */}
-        <div className="bg-gray-50 rounded-md overflow-hidden border-4 border-gray-800">
-          {faqData?.map((item, index) => (
-            <AccordionItem
-              key={index}
-              question={item.q}
-              answer={item.a}
-              isOpen={openIndex === index}
-              onClick={() => toggleItem(index)}
-            />
-          ))}
+        <div className="flex justify-center items-center gap-2">
+          <div className="w-1/2 hidden lg:block">
+            <img src={faqImg} alt="" />
+          </div>
+          {/* FAQ Accordion List */}
+          <div className="bg-gray-50 lg:w-1/2 w-full rounded-md border-4 border-gray-800">
+            {faqData?.map((item, index) => (
+              <AccordionItem
+                key={index}
+                question={item.q}
+                answer={item.a}
+                isOpen={openIndex === index}
+                onClick={() => toggleItem(index)}
+              />
+            ))}
+          </div>
         </div>
 
         {/* CTA Section */}
