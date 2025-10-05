@@ -79,7 +79,7 @@ const BookSteps = () => {
                     <FaRegHeart className=" text-indigo-600 text-xl" />
                   </label>
                   {/* modal box part */}
-                  <div className="modal bg-slate-50 shadow-lg rounded-lg p-2 absolute -right-[150px] bottom-6">
+                  <div className="modal bg-slate-50 shadow-lg rounded-lg p-2 absolute -right-[150px] bottom-6 hidden md:block lg:block">
                     <div className="modal-box">
                       <div className="flex gap-3">
                         <div className="">
