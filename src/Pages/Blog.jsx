@@ -2,53 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaCalendarAlt, FaGlobeAsia, FaMapMarkerAlt } from "react-icons/fa";
 import { FaArrowRight, FaUser } from "react-icons/fa6";
-
-const mockBlogPosts = [
-  {
-    id: 1,
-    title: "The Ultimate Guide to Solo Travel in Southeast Asia",
-    excerpt:
-      "Discover hidden gems, stay safe, and budget effectively while exploring the wonders of Thailand, Vietnam, and Cambodia.",
-    image: "https://placehold.co/600x400/4F46E5/ffffff?text=Asia+Adventure",
-    date: "October 1, 2025",
-    author: "Jane Doe",
-    category: "Adventure",
-    to: "/blog/solo-travel-asia",
-  },
-  {
-    id: 2,
-    title: "Luxurious Winter Escapes: Chalets and Ski Resorts",
-    excerpt:
-      "From the Swiss Alps to Whistler Blackcomb, find the most breathtaking destinations for your next premium winter vacation.",
-    image: "https://placehold.co/600x400/06B6D4/ffffff?text=Winter+Chalet",
-    date: "September 25, 2025",
-    author: "Alex Smith",
-    category: "Luxury",
-    to: "/blog/winter-escapes",
-  },
-  {
-    id: 3,
-    title: "Packing Like a Pro: The Minimalist Traveller's Checklist",
-    excerpt:
-      "Learn the secrets to packing light, avoiding baggage fees, and having everything you need for a two-week journey.",
-    image: "https://placehold.co/600x400/EC4899/ffffff?text=Travel+Essentials",
-    date: "September 18, 2025",
-    author: "Chris Lee",
-    category: "Tips & Guides",
-    to: "/blog/packing-checklist",
-  },
-  {
-    id: 4,
-    title: "The Most Underrated European Cities for Foodies",
-    excerpt:
-      "Move beyond Paris and Rome! Explore the culinary delights of Porto, Lyon, and Bologna for an authentic taste of Europe.",
-    image: "https://placehold.co/600x400/F59E0B/ffffff?text=European+Cuisine",
-    date: "September 10, 2025",
-    author: "Maria Garcia",
-    category: "Food",
-    to: "/blog/underrated-food-cities",
-  },
-];
+import { blogPosts } from "../Assets/data/dataBank";
 
 const Blog = () => {
   return (
@@ -86,7 +40,7 @@ const Blog = () => {
         animate="visible"
         className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        {mockBlogPosts?.map((post) => (
+        {blogPosts?.map((post) => (
           <motion.div
             key={post?.id}
             variants={{
