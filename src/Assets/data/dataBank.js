@@ -252,25 +252,25 @@ export const premiumFeaturesData = [
     title: "Priority Booking & Deals",
     description:
       "Get early access to flash sales and exclusive routes not available to standard users.",
-    Icon: <GoStarFill className="w-8 h-8 text-yellow-500 mb-3" />,
+    Icon: <GoStarFill className="w-8 h-8 text-yellow-500 mr-2" />,
   },
   {
     title: "24/7 Dedicated Support",
     description:
       "Direct access to a senior travel advisor via chat or phone, day or night.",
-    Icon: <BiSupport className="w-8 h-8 text-yellow-500 mb-3" />,
+    Icon: <BiSupport className="w-8 h-8 text-yellow-500 mr-2" />,
   },
   {
     title: "Flexible Cancellation",
     description:
       "Waived or reduced fees for changes and cancellations on most bookings.",
-    Icon: <BiCreditCardAlt className="w-8 h-8 text-yellow-500 mb-3" />,
+    Icon: <BiCreditCardAlt className="w-8 h-8 text-yellow-500 mr-2" />,
   },
   {
     title: "Upgraded Airport Lounge Access",
     description:
       "Complimentary access to select premium airport lounges globally.",
-    Icon: <GrLounge className="w-8 h-8 text-yellow-500 mb-3" />,
+    Icon: <GrLounge className="w-8 h-8 text-yellow-500 mr-2" />,
   },
 ];
 

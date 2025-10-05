@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { FaGlobeAsia } from "react-icons/fa";
 import { blogPosts } from "../Assets/data/dataBank";
 import BlogCTA from "../Components/Blog/BlogCTA";
 import BlogCard from "../Components/Blog/BlogCard";
@@ -11,13 +10,12 @@ const Blog = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-7xl mx-auto py-12 text-center border-b border-gray-700 mb-12"
+        className="max-w-6xl mx-auto text-center mb-8"
       >
-        <FaGlobeAsia className="w-12 h-12 mx-auto text-yellow-400 mb-4" />
-        <h1 className="text-5xl font-extrabold text-white tracking-tight">
+        <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">
           WindTravels Blog
         </h1>
-        <p className="mt-3 text-xl text-gray-400">
+        <p className="mt-2 text-xl text-gray-400">
           Your journey starts here. Explore our travel tips, guides, and
           destination highlights.
         </p>

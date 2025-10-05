@@ -26,7 +26,7 @@ const Premium = () => {
 
       {/* Feature Highlights Section */}
       <div className="max-w-6xl mx-auto my-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {premiumFeaturesData?.map((feature, index) => (
             <motion.div
               key={index}
@@ -48,10 +48,12 @@ const Premium = () => {
               }}
               className="p-6 bg-gray-900 rounded-xl shadow-lg border border-gray-700/50 hover:border-yellow-500 transition duration-300"
             >
-              {feature?.Icon}
-              <h3 className="text-xl font-bold text-white mb-2">
-                {feature?.title}
-              </h3>
+              <div className="flex items-center justify-center mb-2">
+                {feature?.Icon}
+                <h3 className="text-lg font-bold text-white">
+                  {feature?.title}
+                </h3>
+              </div>
               <p className="text-gray-400 text-sm">{feature?.description}</p>
             </motion.div>
           ))}

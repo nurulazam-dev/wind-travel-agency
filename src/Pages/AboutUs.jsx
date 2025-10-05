@@ -32,7 +32,7 @@ const AboutUs = () => {
         <h2 className="text-xl md:text-2xl font-medium text-yellow-500 mt-2">
           The story behind WindTravels: Where expertise meets adventure.
         </h2>
-        <p className="mt-3 text-lg text-gray-400 max-w-3xl mx-auto">
+        <p className="mt-3 text-lg text-gray-400 max-w-4xl mx-auto">
           Founded in 2015 on the principle that travel should be effortless,
           enriching, and unforgettable, **WindTravels** has grown from a local
           startup into a global leader in personalized adventure travel. We
@@ -42,7 +42,7 @@ const AboutUs = () => {
       </motion.div>
 
       {/* Mission and Vision Section */}
-      <div className="max-w-6xl mx-auto mt-2">
+      <div className="max-w-6xl mx-auto mt-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
