@@ -1,44 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaAnchor, FaRegCompass, FaRegHeart } from "react-icons/fa";
-import { FiZap } from "react-icons/fi";
-import { IoShieldOutline } from "react-icons/io5";
-
-const missionVision = [
-  {
-    title: "Our Mission",
-    icon: <FaAnchor className="w-10 h-10 text-yellow-500 mb-4" />,
-    description:
-      "To connect people with the world's most incredible destinations through seamless booking, expert guidance, and personalized itineraries.",
-  },
-  {
-    title: "Our Vision",
-    icon: <FiZap className="w-10 h-10 text-yellow-500 mb-4" />,
-    description:
-      "To be the most trusted and innovative travel platform, inspiring a billion journeys and promoting sustainable, responsible tourism worldwide.",
-  },
-];
-
-const keyDifferences = [
-  {
-    title: "Expert Local Guides",
-    icon: <FaRegCompass className="w-8 h-8 text-yellow-500 mb-3" />,
-    description:
-      "We partner only with verified local experts who offer authentic, immersive experiences.",
-  },
-  {
-    title: "Price Match Guarantee",
-    icon: <IoShieldOutline className="w-8 h-8 text-yellow-500 mb-3" />,
-    description:
-      "Find a lower price? We'll match it and give you an extra discount on your next trip.",
-  },
-  {
-    title: "Customer-First Philosophy",
-    icon: <FaRegHeart className="w-8 h-8 text-yellow-500 mb-3" />,
-    description:
-      "Our dedicated support team works 24/7 to ensure your trip is perfect from start to finish.",
-  },
-];
+import { keyDifferencesData, missionVisionData } from "../Assets/data/dataBank";
 
 const AboutUs = () => {
   const sectionVariants = {
@@ -57,7 +19,7 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen bg-gray-800 text-gray-300 p-4 sm:p-8 font-inter">
-      {/* 1. Hero / Introduction */}
+      {/* Introduction */}
       <motion.div
         initial="hidden"
         animate="visible"
@@ -79,7 +41,7 @@ const AboutUs = () => {
         </p>
       </motion.div>
 
-      {/* 2. Mission and Vision Section */}
+      {/* Mission and Vision Section */}
       <div className="max-w-6xl mx-auto mt-4">
         <motion.div
           initial="hidden"
@@ -88,7 +50,7 @@ const AboutUs = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {missionVision.map((item, index) => (
+          {missionVisionData?.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -108,7 +70,7 @@ const AboutUs = () => {
         </motion.div>
       </div>
 
-      {/* 3. The WindTravels Difference */}
+      {/* Difference */}
       <div className="max-w-6xl mx-auto mt-12 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -127,7 +89,7 @@ const AboutUs = () => {
           viewport={{ once: true, amount: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {keyDifferences.map((diff, index) => (
+          {keyDifferencesData?.map((diff, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -147,7 +109,7 @@ const AboutUs = () => {
         </motion.div>
       </div>
 
-      {/* 4. Our Story / Milestones */}
+      {/* Our Milestones */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -203,7 +165,7 @@ const AboutUs = () => {
         </ul>
       </motion.div>
 
-      {/* 5. Team CTA */}
+      {/* Team CTA */}
       <motion.div
         initial="hidden"
         whileInView="visible"

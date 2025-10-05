@@ -14,6 +14,9 @@ import usersIcon from "../images/hero/usersIcon.png";
 import palawanImg from "../images/hero/palawan.png";
 import baguioImg from "../images/hero/baguio.png";
 import boracayImg from "../images/hero/boracay.png";
+import { FaAnchor, FaRegCompass, FaRegHeart } from "react-icons/fa";
+import { FiZap } from "react-icons/fi";
+import { IoShieldOutline } from "react-icons/io5";
 
 export const service = {
   title: "We Offer Best Services",
@@ -202,5 +205,41 @@ export const faqData = [
   {
     q: "What payment methods do you accept?",
     a: "We accept all major credit cards (Visa, Mastercard, Amex), PayPal, and bank transfers. All transactions are secured with industry-leading encryption to ensure your data is safe.",
+  },
+];
+
+export const missionVisionData = [
+  {
+    title: "Our Mission",
+    icon: <FaAnchor className="w-10 h-10 text-yellow-500 mb-4" />,
+    description:
+      "To connect people with the world's most incredible destinations through seamless booking, expert guidance, and personalized itineraries.",
+  },
+  {
+    title: "Our Vision",
+    icon: <FiZap className="w-10 h-10 text-yellow-500 mb-4" />,
+    description:
+      "To be the most trusted and innovative travel platform, inspiring a billion journeys and promoting sustainable, responsible tourism worldwide.",
+  },
+];
+
+export const keyDifferencesData = [
+  {
+    title: "Expert Local Guides",
+    icon: <FaRegCompass className="w-8 h-8 text-yellow-500 mb-3" />,
+    description:
+      "We partner only with verified local experts who offer authentic, immersive experiences.",
+  },
+  {
+    title: "Price Match Guarantee",
+    icon: <IoShieldOutline className="w-8 h-8 text-yellow-500 mb-3" />,
+    description:
+      "Find a lower price? We'll match it and give you an extra discount on your next trip.",
+  },
+  {
+    title: "Customer-First Philosophy",
+    icon: <FaRegHeart className="w-8 h-8 text-yellow-500 mb-3" />,
+    description:
+      "Our dedicated support team works 24/7 to ensure your trip is perfect from start to finish.",
   },
 ];
