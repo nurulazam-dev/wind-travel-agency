@@ -24,15 +24,15 @@ const AboutUs = () => {
         initial="hidden"
         animate="visible"
         variants={sectionVariants}
-        className="max-w-6xl mx-auto py-6 text-center border-b border-gray-800"
+        className="max-w-6xl mx-auto text-center"
       >
-        <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">
           Your Journey, Elevated.
         </h1>
-        <h2 className="text-xl md:text-2xl font-medium text-yellow-500 mt-4">
+        <h2 className="text-xl md:text-2xl font-medium text-yellow-500 mt-2">
           The story behind WindTravels: Where expertise meets adventure.
         </h2>
-        <p className="mt-8 text-lg text-gray-400 max-w-3xl mx-auto">
+        <p className="mt-3 text-lg text-gray-400 max-w-3xl mx-auto">
           Founded in 2015 on the principle that travel should be effortless,
           enriching, and unforgettable, **WindTravels** has grown from a local
           startup into a global leader in personalized adventure travel. We
@@ -42,7 +42,7 @@ const AboutUs = () => {
       </motion.div>
 
       {/* Mission and Vision Section */}
-      <div className="max-w-6xl mx-auto mt-4">
+      <div className="max-w-6xl mx-auto mt-2">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -71,13 +71,13 @@ const AboutUs = () => {
       </div>
 
       {/* Difference */}
-      <div className="max-w-6xl mx-auto mt-12 text-center">
+      <div className="max-w-6xl mx-auto mt-10 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-extrabold text-white mb-10"
+          className="text-4xl font-extrabold text-white mb-6"
         >
           What Makes WindTravels Different?
         </motion.h2>

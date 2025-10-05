@@ -17,6 +17,9 @@ import boracayImg from "../images/hero/boracay.png";
 import { FaAnchor, FaRegCompass, FaRegHeart } from "react-icons/fa";
 import { FiZap } from "react-icons/fi";
 import { IoShieldOutline } from "react-icons/io5";
+import { GoStarFill } from "react-icons/go";
+import { BiCreditCardAlt, BiSupport } from "react-icons/bi";
+import { GrLounge } from "react-icons/gr";
 
 export const service = {
   title: "We Offer Best Services",
@@ -241,5 +244,65 @@ export const keyDifferencesData = [
     icon: <FaRegHeart className="w-8 h-8 text-yellow-500 mb-3" />,
     description:
       "Our dedicated support team works 24/7 to ensure your trip is perfect from start to finish.",
+  },
+];
+
+export const premiumFeaturesData = [
+  {
+    title: "Priority Booking & Deals",
+    description:
+      "Get early access to flash sales and exclusive routes not available to standard users.",
+    Icon: <GoStarFill className="w-8 h-8 text-yellow-500 mb-3" />,
+  },
+  {
+    title: "24/7 Dedicated Support",
+    description:
+      "Direct access to a senior travel advisor via chat or phone, day or night.",
+    Icon: <BiSupport className="w-8 h-8 text-yellow-500 mb-3" />,
+  },
+  {
+    title: "Flexible Cancellation",
+    description:
+      "Waived or reduced fees for changes and cancellations on most bookings.",
+    Icon: <BiCreditCardAlt className="w-8 h-8 text-yellow-500 mb-3" />,
+  },
+  {
+    title: "Upgraded Airport Lounge Access",
+    description:
+      "Complimentary access to select premium airport lounges globally.",
+    Icon: <GrLounge className="w-8 h-8 text-yellow-500 mb-3" />,
+  },
+];
+
+export const pricingPlansData = [
+  {
+    name: "Pro Traveler",
+    price: 9.99,
+    interval: "per month",
+    description:
+      "Perfect for frequent flyers and digital nomads who need maximum flexibility.",
+    features: [
+      "All core WindTravels features",
+      "Priority booking alerts (24 hours early)",
+      "Standard dedicated support (business hours)",
+      "1x complimentary lounge pass per year",
+      "Discounted service fees",
+    ],
+    isMostPopular: false,
+  },
+  {
+    name: "Elite Nomad",
+    price: 99.99,
+    interval: "per year (Save 17%)",
+    description:
+      "The ultimate package for true globetrotters seeking the best value and privileges.",
+    features: [
+      "Everything in Pro Traveler, plus:",
+      "Exclusive partner discounts (15% off hotels)",
+      "24/7 dedicated support line (instant response)",
+      "4x complimentary lounge passes per year",
+      "Waived service fees for changes",
+    ],
+    isMostPopular: true,
   },
 ];
