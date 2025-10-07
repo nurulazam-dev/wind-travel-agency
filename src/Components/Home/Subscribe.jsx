@@ -6,7 +6,7 @@ const Subscribe = () => {
   return (
     <section
       style={{ background: `url(${subsImg})`, backgroundSize: "cover" }}
-      className="mx-20 py-12 relative my-5"
+      className="mx-20 py-12 relative"
     >
       <div className="border rounded-full bg-yellow-600 text-white p-2 h-14 w-14 flex justify-center items-center absolute -right-[20px] top-[4%] translate-y-[-50%]">
         <BsFillSendFill className="w-8 h-7" />

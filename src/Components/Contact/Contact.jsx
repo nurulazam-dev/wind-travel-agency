@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="py-20 font-inter min-h-screen p-4 sm:p-8">
+    <div className="py-14 px-10">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -41,13 +41,12 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-6"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-2">
+          <p className="text-center lg:text-base md:text-sm text-xs text-yellow-500 mb-2">
+            CONTACT
+          </p>
+          <h2 className="text-center font-semibold lg:text-5xl md:text-4xl text-2xl text-slate-200">
             Get In Touch with Us
           </h2>
-          <p className="text-slate-600 max-w-3xl mx-auto text-md">
-            We're here to answer any questions you have about booking,
-            customizing your trip, or just to say hello.
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -58,7 +57,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h3 className="text-3xl font-bold text-slate-800 mb-4">
+            <h3 className="text-3xl font-bold text-slate-300 mb-4">
               Direct Contact
             </h3>
 
@@ -94,9 +93,9 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 bg-slate-100 p-8 sm:p-10 rounded-xl shadow-xl border border-gray-200"
+            className="lg:col-span-2 bg-slate-900 p-8 sm:p-10 rounded-xl shadow-xl border border-gray-300"
           >
-            <h3 className="text-3xl font-bold text-gray-800 mb-6">
+            <h3 className="text-3xl font-bold text-gray-300 mb-6">
               Send Us a Message
             </h3>
 
@@ -107,7 +106,7 @@ const Contact = () => {
                 className="text-center py-20 bg-gray-700 rounded-lg"
               >
                 <FiSend className="w-12 h-12 mx-auto text-yellow-500 mb-4" />
-                <h4 className="text-2xl font-semibold text-white">
+                <h4 className="text-2xl font-semibold text-slate-300">
                   Message Sent Successfully!
                 </h4>
                 <p className="text-gray-400 mt-2">
@@ -153,7 +152,7 @@ const Contact = () => {
                   maxLength={500}
                   rows="4"
                   required
-                  className="w-full p-4 bg-slate-50 text-gray-800 shadow-lg placeholder-gray-500 border border-gray-500 rounded-md focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition duration-200 resize-none"
+                  className="w-full p-4 bg-slate-800 text-gray-400 placeholder-gray-500 border border-gray-500 rounded-md focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition duration-200 resize-none"
                 ></textarea>
 
                 <motion.button
