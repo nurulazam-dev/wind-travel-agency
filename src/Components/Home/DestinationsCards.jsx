@@ -6,11 +6,15 @@ const DestinationsCards = () => {
 
   return (
     <>
-      <div className="flex flex-col  lg:flex-row mx-5 justify-center items-center">
-        {cards.map((card) => {
+      <div className="flex flex-col  lg:flex-row gap-8 justify-center items-center">
+        {cards?.map((card, index) => {
           const { icon, title, price, subtitle } = card;
+
           return (
-            <div className="bg-slate-100 shadow-2xl mx-5 rounded-2xl text-slate-700 font-semibold">
+            <div
+              key={index}
+              className="bg-slate-900 shadow-sm shadow-yellow-300 rounded-2xl text-slate-300 font-semibold"
+            >
               <img
                 src={icon}
                 alt="Service"
