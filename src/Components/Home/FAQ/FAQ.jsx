@@ -3,7 +3,7 @@ import { faqData } from "../../../Assets/data/dataBank";
 import AccordionItem from "./AccordionItem";
 import { motion } from "framer-motion";
 import { BiSupport } from "react-icons/bi";
-import faqImg from "../../../Assets/images/faqImg.jpg";
+import faqImg from "../../../Assets/images/faq2.png";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -13,7 +13,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="py-20 font-inter p-3 sm:p-5 ">
+    <section className="mb-14 px-10">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -22,13 +22,12 @@ const FAQ = () => {
       >
         {/* Header Section */}
         <div className="text-center mb-6 max-w-2xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-300 mb-3">
+          <p className="text-center lg:text-base md:text-sm text-xs text-yellow-500 mb-2">
+            FAQ
+          </p>
+          <h2 className="text-center font-semibold lg:text-5xl md:text-4xl text-2xl text-slate-200">
             Frequently Asked Questions
           </h2>
-          <p className="text-slate-600">
-            Find quick answers to the most common questions about booking,
-            policies, and our services at WindTravels.
-          </p>
         </div>
 
         <div className="flex justify-center items-center gap-2">
@@ -37,7 +36,7 @@ const FAQ = () => {
             <img src={faqImg} alt="" />
           </div>
           {/* FAQ Accordion List */}
-          <div className="bg-gray-50 lg:w-1/2 w-full rounded-md border-4 border-gray-800">
+          <div className="bg-gray-50 lg:w-1/2 w-full border border-gray-300">
             {faqData?.map((item, index) => (
               <AccordionItem
                 key={index}
@@ -51,8 +50,8 @@ const FAQ = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="pt-4 text-center">
-          <p className="text-xl text-slate-800 font-semibold mb-4">
+        <div className="pt-2 text-center">
+          <p className="text-xl text-slate-800 font-semibold">
             Can't find the answer you're looking for?
           </p>
           <motion.button
@@ -69,7 +68,7 @@ const FAQ = () => {
           </motion.button>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
