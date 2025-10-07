@@ -35,7 +35,7 @@ const Hero = () => {
   ];
   return (
     <div
-      className="section"
+      className="section text-slate-600"
       style={{ background: `url(${bgImg})`, backgroundSize: "cover" }}
     >
       <div className="px-4 py-5">

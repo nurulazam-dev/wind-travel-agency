@@ -10,7 +10,7 @@ import TrustedCo from "../Components/Home/TrustedCo";
 
 const Home = () => {
   return (
-    <>
+    <div className="bg-gray-800 text-gray-300">
       <Hero />
       <Category />
       <Destinations />
@@ -20,7 +20,7 @@ const Home = () => {
       <FAQ />
       <Subscribe />
       <Contact />
-    </>
+    </div>
   );
 };
 
