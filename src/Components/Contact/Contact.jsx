@@ -95,7 +95,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2 bg-slate-900 p-8 sm:p-10 rounded-xl shadow-xl border border-gray-300"
           >
-            <h3 className="text-3xl font-bold text-gray-300 mb-6">
+            <h3 className="lg:text-3xl text-2xl font-bold text-gray-300 lg:mb-6 mb-3 text-center">
               Send Us a Message
             </h3>
 

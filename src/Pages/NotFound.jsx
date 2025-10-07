@@ -5,7 +5,7 @@ import { BiSolidError } from "react-icons/bi";
 
 const NotFound = () => {
   return (
-    <div className="flex items-center justify-center p-4 font-inter">
+    <div className="flex items-center justify-center p-4 font-inter bg-slate-800 min-h-screen">
       <motion.div
         variants={{
           hidden: { opacity: 0, scale: 0.95 },
@@ -21,15 +21,15 @@ const NotFound = () => {
       >
         <BiSolidError className="w-16 h-16 mx-auto text-red-600 mb-1 animate-pulse" />
 
-        <h1 className="text-7xl md:text-8xl font-extrabold mb-1 tracking-tighter text-slate-800">
-          404
+        <h1 className="text-7xl md:text-8xl font-extrabold mb-1 tracking-tighter text-slate-200">
+          4 0 4
         </h1>
 
-        <h2 className="text-3xl font-bold mb-1 text-slate-700">
+        <h2 className="text-3xl font-bold mb-1 text-slate-300">
           Page Not Found
         </h2>
 
-        <p className="text-lg text-slate-600 mb-4 leading-6">
+        <p className="text-lg text-slate-400 mb-4 leading-6">
           Oops! The journey took us off-track. The page you are looking for
           doesn't exist or has moved.
         </p>
