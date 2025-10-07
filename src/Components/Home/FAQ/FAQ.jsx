@@ -13,7 +13,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="py-20 font-inter p-3 sm:p-5">
+    <div className="py-20 font-inter p-3 sm:p-5 ">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ const FAQ = () => {
       >
         {/* Header Section */}
         <div className="text-center mb-6 max-w-2xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-3">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-300 mb-3">
             Frequently Asked Questions
           </h2>
           <p className="text-slate-600">
