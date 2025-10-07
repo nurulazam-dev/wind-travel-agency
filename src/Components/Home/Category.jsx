@@ -2,7 +2,7 @@ import { service } from "../../Assets/data/dataBank";
 import CategoryCards from "./CategoryCards";
 
 const Category = () => {
-  const { title, subtitle } = service;
+  const { title, subtitle, cards } = service;
 
   return (
     <section className="mb-14 px-10">
@@ -14,7 +14,11 @@ const Category = () => {
           {title}
         </h2>
       </div>
-      <CategoryCards />
+      <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
+        {cards?.map((card, cardIndex) => (
+          <CategoryCards card={card} cardIndex={cardIndex} />
+        ))}
+      </div>
     </section>
   );
 };

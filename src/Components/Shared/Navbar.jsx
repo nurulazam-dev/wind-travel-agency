@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import navLogo from "../../Assets/images/Icons/footerIcon.png";
 
 const navLinks = [
-  { to: "/", label: "Home" },
+  { to: "/home", label: "Home" },
   { to: "/aboutUs", label: "About Us" },
   { to: "/premium", label: "Premium" },
   { to: "/blogs", label: "Blogs" },
@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav className="fixed w-full top-0 z-50 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 lg:px-10 py-2 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/home" className="flex items-center gap-2">
           <img src={navLogo} alt="WindTravels Logo" className="w-10 h-10" />
           <span className="text-xl lg:text-2xl font-bold text-white tracking-wide">
             WindTravels
