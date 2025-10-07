@@ -14,7 +14,7 @@ const BookSteps = () => {
   ];
 
   return (
-    <div className="mb-14 px-10 pt-4">
+    <div className="mb-28 px-10 pt-4">
       <div className="flex flex-col  lg:flex-row gap-6 justify-center items-center">
         <div className="lg:basis-1/2 text-slate-300">
           <p className="lg:text-base md:text-sm text-xs text-yellow-500 mb-1">

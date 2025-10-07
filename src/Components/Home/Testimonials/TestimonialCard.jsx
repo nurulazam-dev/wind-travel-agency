@@ -8,14 +8,12 @@ const TestimonialCard = ({ testimonial, isVisible, style }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="absolute w-full p-8 pb-4 rounded-2xl shadow-xl border border-gray-100 transition-all duration-300 transform"
+      className="absolute w-full p-8 pb-4 rounded-2xl shadow-xl border border-gray-100 transition-all duration-300 transform bg-slate-900 text-slate-300"
       style={{
         ...style,
-        backgroundColor: "white",
-        color: "#111827",
       }}
     >
-      <p className="text-lg leading-7 text-justify mb-4 italic">
+      <p className="text-lg leading-6 text-justify my-3 italic text-slate-400">
         "{testimonial?.quote}"
       </p>
       <div>

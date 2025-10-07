@@ -21,17 +21,17 @@ const Testimonials = () => {
   const nextIndex = (currentIndex + 1) % testimonialsData?.length;
 
   return (
-    <div className="py-20 pb-0 font-inter flex items-center justify-center p-4">
+    <div className="mb-10 px-10 flex items-center justify-center text-slate-300">
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto w-full">
         {/* Left side: Headings and Navigation Dots */}
         <div className="md:sticky md:top-20 h-full md:h-auto">
-          <p className="text-sm uppercase tracking-widest text-slate-500 font-semibold mb-2">
+          <p className="lg:text-base md:text-sm text-xs text-yellow-500 mb-2">
             TESTIMONIALS
           </p>
-          <h2 className="text-4xl lg:text-6xl font-bold text-slate-800 leading-tight mb-8">
+          <h2 className="font-bold lg:text-5xl md:text-4xl text-2xl text-slate-200 mb-4">
             What People Say <br /> About Us.
           </h2>
-          <p className="text-slate-600 max-w-md mb-8">
+          <p className="text-[16px] leading-5 text-slate-400 max-w-md mb-8">
             Hear from our satisfied travelers who trusted WindTravels to create
             their perfect journey.
           </p>
@@ -45,7 +45,7 @@ const Testimonials = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
                     ? "bg-yellow-500 w-8"
-                    : "bg-gray-700 hover:bg-yellow-600"
+                    : "bg-gray-400 hover:bg-yellow-600"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -78,7 +78,7 @@ const Testimonials = () => {
             />
 
             {/* Author Avatar  */}
-            <div className="absolute -top-12 left-10 w-20 h-20 rounded-full overflow-hidden border-4 border-yellow-500 z-20">
+            <div className="absolute -top-10 left-6 w-20 h-20 rounded-full overflow-hidden border-4 border-yellow-500 z-20">
               <img
                 src={currentTestimonial?.avatar}
                 alt={currentTestimonial?.name}
@@ -88,7 +88,7 @@ const Testimonials = () => {
             </div>
 
             {/* Navigation Arrows */}
-            <div className="absolute right-2 top-[55%] transform -translate-y-1/2 flex flex-col space-y-2 z-30">
+            <div className="absolute right-2 top-[52%] transform -translate-y-1/2 flex flex-col space-y-2 z-30">
               <motion.button
                 onClick={prevTestimonial}
                 whileHover={{ scale: 1.1, backgroundColor: "#D97706" }}
