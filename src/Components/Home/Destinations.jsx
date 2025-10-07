@@ -2,7 +2,7 @@ import { sell } from "../../Assets/data/dataBank";
 import DestinationsCards from "./DestinationsCards";
 
 const Destinations = () => {
-  const { title, subtitle } = sell;
+  const { title, subtitle, cards } = sell;
 
   return (
     <section className="mb-14 px-10">
@@ -14,7 +14,11 @@ const Destinations = () => {
           {title}
         </h2>
       </div>
-      <DestinationsCards />
+      <div className="flex flex-col  lg:flex-row gap-8 justify-center items-center">
+        {cards?.map((card, index) => (
+          <DestinationsCards card={card} index={index} />
+        ))}
+      </div>
     </section>
   );
 };
