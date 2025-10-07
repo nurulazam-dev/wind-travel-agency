@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8 border-b border-gray-700 pb-12">
-          {/* Branding/Description (Col 1) */}
+          {/* Branding */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Link Sections (Col 2-4) */}
+          {/* Link Sections */}
           {footerInfo?.map((data, index) => (
             <motion.div
               key={index}
@@ -116,7 +116,7 @@ const Footer = () => {
             </motion.div>
           ))}
 
-          {/* App Discovery & Newsletter (Col 5) */}
+          {/* Newsletter */}
           <div className="col-span-2 md:col-span-1 space-y-4">
             <h5 className="text-xl font-bold text-white">Discover our app</h5>
             <p className="text-sm text-gray-400">
@@ -160,7 +160,7 @@ const Footer = () => {
             &copy; {currentYear} WindTravels. All rights reserved.
           </p>
 
-          {/* Simplified Newsletter Signup */}
+          {/* Newsletter Signup */}
           <div className="flex w-full md:w-auto">
             <motion.input
               type="email"

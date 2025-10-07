@@ -58,46 +58,40 @@ const Hero = () => {
             <img src={leftErrIcon} alt="" className="mr-2 pr-3" />
           </div>
           <div className="flex gap-y-[30px] flex-row gap-3">
-            {data?.map((data) => {
-              const { icon, people, title } = data;
-              return (
-                <div className="card card-compact bg-slate-200 rounded-md p-1 shadow-xl">
-                  <div className="card-body">
-                    <img src={icon} alt="Service" />
-                    <div className="">
-                      <h6 className="font-bold lg:text-[16px] md:text-[14px] text-[12px] my-1 text-center">
-                        Trip To {title}
-                      </h6>
-                      <div className="flex justify-around items-center">
-                        <FaUserFriends className="text-[16px] text-slate-700" />
-                        <p className="text-[10px] md:text-[12px] text-slate-600">
-                          {people} people going
-                        </p>
-                      </div>
+            {data?.map((data) => (
+              <div className="card card-compact bg-slate-200 rounded-md p-1 shadow-xl">
+                <div className="card-body">
+                  <img src={data?.icon} alt="Service" />
+                  <div className="">
+                    <h6 className="font-bold lg:text-[16px] md:text-[14px] text-[12px] my-1 text-center">
+                      Trip To {data?.title}
+                    </h6>
+                    <div className="flex justify-around items-center">
+                      <FaUserFriends className="text-[16px] text-slate-700" />
+                      <p className="text-[10px] md:text-[12px] text-slate-600">
+                        {data?.people} people going
+                      </p>
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
         {/* =======SummarySearch ======= */}
         <div className="max-w-5xl mx-auto">
           <div className="bg-slate-200/30 rounded-xl m-6 ml-0 p-5 flex flex-col  lg:flex-row items-center w-full">
             <div className="shadow flex flex-col lg:flex-row justify-between gap-8 items-center w-full bg-slate-200/80 rounded-xl px-5 py-3">
-              {summarySearchData?.map((data) => {
-                const { icon, title, subtitle } = data;
-                return (
-                  <div className="flex justify-between items-center gap-4">
-                    <div className="text-slate-500 text-2xl">{icon}</div>
-                    <div>
-                      <h4 className="text-[12px]">{title}</h4>
-                      <h3 className="text-[12px] font-[500]">{subtitle}</h3>
-                    </div>
-                    <div className="hidden lg:block">{data?.rightBorder}</div>
+              {summarySearchData?.map((data) => (
+                <div className="flex justify-between items-center gap-4">
+                  <div className="text-slate-500 text-2xl">{data?.icon}</div>
+                  <div>
+                    <h4 className="text-[12px]">{data?.title}</h4>
+                    <h3 className="text-[12px] font-[500]">{data?.subtitle}</h3>
                   </div>
-                );
-              })}
+                  <div className="hidden lg:block">{data?.rightBorder}</div>
+                </div>
+              ))}
             </div>
             <div>
               <button className="btn btn-primary ml-4 mt-4 lg:mt-0 text-white bg-yellow-600 hover:bg-yellow-700 px-4 py-3 rounded-lg">

@@ -20,6 +20,9 @@ import { IoShieldOutline } from "react-icons/io5";
 import { GoStarFill } from "react-icons/go";
 import { BiCreditCardAlt, BiSupport } from "react-icons/bi";
 import { GrLounge } from "react-icons/gr";
+import philippineLogo from "../images/TrustedCo/philippine-airlines.png";
+import cebuLogo from "../images/TrustedCo/cebu-pacific.png";
+import airLogo from "../images/TrustedCo/air-asia.png";
 
 export const service = {
   title: "We Offer Best Services",
@@ -352,4 +355,10 @@ export const blogPosts = [
     category: "Food",
     to: "/blog/underrated-food-cities",
   },
+];
+
+export const trustedCos = [
+  { name: "philippine airlines", logo: philippineLogo },
+  { name: "cebu pacific", logo: cebuLogo },
+  { name: "air asia", logo: airLogo },
 ];

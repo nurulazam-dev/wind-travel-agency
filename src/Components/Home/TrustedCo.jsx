@@ -1,13 +1,6 @@
-import philippineLogo from "../../Assets/images/TrustedCo/philippine-airlines.png";
-import cebuLogo from "../../Assets/images/TrustedCo/cebu-pacific.png";
-import airLogo from "../../Assets/images/TrustedCo/air-asia.png";
+import { trustedCos } from "../../Assets/data/dataBank";
 
 const TrustedCo = () => {
-  const trustedCos = [
-    { name: "philippine airlines", logo: philippineLogo },
-    { name: "cebu pacific", logo: cebuLogo },
-    { name: "air asia", logo: airLogo },
-  ];
   return (
     <section className="mb-10 px-10">
       <div className="mb-6">
