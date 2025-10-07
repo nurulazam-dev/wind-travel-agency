@@ -35,7 +35,7 @@ const Hero = () => {
   ];
   return (
     <div
-      className="mb-10 text-slate-600"
+      className="mb-14 text-slate-600"
       style={{ background: `url(${bgImg})`, backgroundSize: "cover" }}
     >
       <div className="px-4 py-5">

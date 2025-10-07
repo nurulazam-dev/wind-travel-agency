@@ -79,7 +79,7 @@ export const footerInfo = [
 
 export const sell = {
   title: "Top Destinations",
-  subtitle: "Top Selling",
+  subtitle: "TOP SELLING",
   cards: [
     {
       icon: cebuImg,

@@ -22,7 +22,7 @@ const CategoryCards = () => {
                 <img src={icon} alt="" className="w-16 h-16 mx-auto" />
               </div>
               <h4 className="mb-1 text-[20px] font-medium">{title}</h4>
-              <p className="text-[14px] text-slate-600">{subtitle}</p>
+              <p className="text-[14px] text-slate-400">{subtitle}</p>
             </div>
           </div>
         );
