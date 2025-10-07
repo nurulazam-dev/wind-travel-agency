@@ -12,10 +12,13 @@ const Blog = () => {
         transition={{ duration: 0.5 }}
         className="max-w-6xl mx-auto text-center mb-8"
       >
+        <h1 className="text-sm font-semibold uppercase tracking-widest text-yellow-400 mb-1">
+          Our Latest blog
+        </h1>
         <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">
           WindTravels Blog
         </h1>
-        <p className="mt-2 text-xl text-gray-400">
+        <p className="mt-2 text-lg text-gray-400">
           Your journey starts here. Explore our travel tips, guides, and
           destination highlights.
         </p>

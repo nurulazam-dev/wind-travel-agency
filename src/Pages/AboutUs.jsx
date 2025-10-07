@@ -26,13 +26,16 @@ const AboutUs = () => {
         variants={sectionVariants}
         className="max-w-6xl mx-auto text-center"
       >
+        <h1 className="text-sm font-semibold uppercase tracking-widest text-yellow-400 mb-1">
+          About Us
+        </h1>
         <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">
           Your Journey, Elevated.
         </h1>
-        <h2 className="text-xl md:text-2xl font-medium text-yellow-500 mt-2">
+        <h2 className="text-xl md:text-2xl font-medium text-yellow-500 mt-3">
           The story behind WindTravels: Where expertise meets adventure.
         </h2>
-        <p className="mt-3 text-lg text-gray-400 max-w-4xl mx-auto">
+        <p className="my-3 text-lg text-gray-400 max-w-4xl mx-auto">
           Founded in 2015 on the principle that travel should be effortless,
           enriching, and unforgettable, **WindTravels** has grown from a local
           startup into a global leader in personalized adventure travel. We

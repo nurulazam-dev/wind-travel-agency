@@ -18,7 +18,7 @@ const Premium = () => {
         <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">
           Travel Smarter, Not Harder.
         </h2>
-        <p className="mt-2 text-xl text-gray-400 max-w-2xl mx-auto">
+        <p className="mt-2 text-lg text-gray-400 max-w-2xl mx-auto">
           Unlock exclusive benefits, priority support, and save money with the
           ultimate travel subscription built for the modern adventurer.
         </p>
