@@ -5,7 +5,7 @@ const Category = () => {
   const { title, subtitle } = service;
 
   return (
-    <section className="my-5 px-10">
+    <section className="mb-10 px-10">
       <div className="mb-6">
         <p className="text-center lg:text-base md:text-sm text-xs text-yellow-500 mb-1">
           {subtitle}
