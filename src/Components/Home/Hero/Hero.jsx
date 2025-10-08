@@ -1,5 +1,6 @@
 import { mostPopularData, searchBarData } from "../../../Assets/data/dataBank";
 import bgImg from "../../../Assets/images/hero/hero-bg-img.png";
+import HeroSearchBar from "./HeroSearchBar";
 import PopularCard from "./PopularCard";
 
 const Hero = () => {
@@ -17,31 +18,23 @@ const Hero = () => {
         <div className="lg:text-6xl md:text-5xl text-3xl font-bold max-w-2xl text-slate-800 tracking-normal">
           <h3>Spend your vacation with our activities</h3>
         </div>
-        {/* MostPopularCard section */}
+        {/* ======Most Popular Card======= */}
         <div className="my-6 mt-2 py-4">
           <h4 className="uppercase text-[24px] font-bold text-slate-800 mb-2">
             {title}
           </h4>
-
           <div className="flex gap-y-[30px] flex-row gap-4 lg:gap-6">
             {data?.map((d, index) => (
               <PopularCard d={d} index={index} />
             ))}
           </div>
         </div>
-        {/* =======SummarySearch ======= */}
+        {/* =======Search Bar part======= */}
         <div className="max-w-5xl mx-auto">
           <div className="bg-slate-900/40 rounded-xl m-6 ml-0 p-5 flex flex-col  lg:flex-row items-center w-full border border-yellow-400 shadow-lg shadow-slate-700">
             <div className="shadow flex flex-col lg:flex-row justify-between gap-8 items-center w-full bg-slate-900/90 rounded-xl px-5 py-3">
-              {searchBarData?.map((data) => (
-                <div className="flex justify-between items-center text-slate-400 gap-4">
-                  <div className="text-2xl">{data?.icon}</div>
-                  <div>
-                    <h4 className="text-[12px]">{data?.title}</h4>
-                    <h3 className="text-[12px] font-[500]">{data?.subtitle}</h3>
-                  </div>
-                  <div className="hidden lg:block">{data?.rightBorder}</div>
-                </div>
+              {searchBarData?.map((data, index) => (
+                <HeroSearchBar data={data} index={index} />
               ))}
             </div>
             <div>
