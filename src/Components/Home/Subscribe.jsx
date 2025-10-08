@@ -1,13 +1,9 @@
 import { FaEnvelope } from "react-icons/fa6";
-import subsImg from "../../Assets/images/Icons/subscribe.png";
 import { BsFillSendFill } from "react-icons/bs";
 
 const Subscribe = () => {
   return (
-    <section
-      style={{ background: `url(${subsImg})`, backgroundSize: "cover" }}
-      className="lg:mx-20 md:mx-15 mx-6 lg:py-12 md:py-10 py-8 relative"
-    >
+    <section className="lg:mx-20 md:mx-15 mx-6 lg:py-12 md:py-10 py-8 relative bg-slate-900/70 rounded-tl-full rounded-br-full border border-slate-700">
       <div className="border rounded-full bg-yellow-600 text-white p-2 h-14 w-14 flex justify-center items-center absolute -right-[20px] top-[4%] translate-y-[-50%]">
         <BsFillSendFill className="w-8 h-7" />
       </div>
@@ -24,10 +20,10 @@ const Subscribe = () => {
           <input
             type="text"
             placeholder="Your email"
-            className="input input-md w-full shadow-xl rounded-md pl-10 pr-7 py-3"
+            className="input input-md w-full focus:outline-none shadow-xl rounded-r-none rounded-md pl-10 pr-7 py-3"
           />
         </div>
-        <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-md ml-4 shadow-lg">
+        <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-l-none rounded-md shadow-lg">
           Subscribe
         </button>
       </div>

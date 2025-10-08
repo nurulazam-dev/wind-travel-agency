@@ -38,7 +38,7 @@ const Hero = () => {
               ))}
             </div>
             <div>
-              <button className="btn btn-primary ml-4 mt-4 lg:mt-0 text-white bg-yellow-600 hover:bg-yellow-700 px-4 py-3 rounded-lg">
+              <button className="btn btn-primary ml-3 mt-4 lg:mt-0 text-white bg-yellow-600 hover:bg-yellow-700 px-5 py-3 rounded-lg">
                 Search
               </button>
             </div>

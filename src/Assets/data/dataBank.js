@@ -128,25 +128,30 @@ export const searchBarData = [
   {
     icon: <IoHomeOutline />,
     title: "Accommodation",
-    subtitle: "Aklan,Boracay",
-    rightBorder: <div className="border h-8 border-slate-400 ml-6"></div>,
+    dataType: "text",
+    subtitle: "Aklan, Boracay",
+    rightBorder: <div className="border h-9 border-slate-500 ml-1"></div>,
   },
   {
     icon: <LuCalendarDays />,
     title: "Check-in",
+    dataType: "date",
     subtitle: "04.03.2022",
-    rightBorder: <div className="border h-8 border-slate-400 ml-6"></div>,
+    rightBorder: <div className="border h-9 border-slate-500 ml-1"></div>,
   },
   {
     icon: <LuCalendarDays />,
     title: "Check-Out",
     subtitle: "04.13.2022",
-    rightBorder: <div className="border h-8 border-slate-400 ml-6"></div>,
+    dataType: "date",
+    rightBorder: <div className="border h-9 border-slate-500 ml-1"></div>,
   },
   {
     icon: <FiUsers />,
     title: "Guests",
-    subtitle: "2Adults",
+    dataType: "Number",
+    subtitle: "2 Adults",
+    rightBorder: <div className="ml-0"></div>,
   },
 ];
 
