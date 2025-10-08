@@ -1,5 +1,8 @@
-import { mostPopularData, summarySearchData } from "../../Assets/data/dataBank";
-import bgImg from "../../Assets/images/hero/hero-bg-img.png";
+import {
+  mostPopularData,
+  summarySearchData,
+} from "../../../Assets/data/dataBank";
+import bgImg from "../../../Assets/images/hero/hero-bg-img.png";
 import { FaUserFriends } from "react-icons/fa";
 
 const Hero = () => {
@@ -7,9 +10,8 @@ const Hero = () => {
 
   return (
     <div
-      className="mb-14 text-slate-600"
+      className="mb-14 pt-5 text-slate-600"
       style={{ background: `url(${bgImg})`, backgroundSize: "cover" }}
-      // style={{ background: `url(${bgImg})` }}
     >
       <div className="px-4 py-5">
         <p className="md:text-[14px] text-[12px] lg:text-[16px] font-semibold uppercase text-slate-700 tracking-wide">
@@ -19,23 +21,23 @@ const Hero = () => {
           <h3>Spend your vacation with our activities</h3>
         </div>
         {/* MostPopularCard section */}
-        <div className="my-6 py-4">
-          <h4 className="uppercase text-[24px] font-bold text-white mb-2">
+        <div className="my-6 mt-2 py-4">
+          <h4 className="uppercase text-[24px] font-bold text-slate-800 mb-2">
             {title}
           </h4>
 
-          <div className="flex gap-y-[30px] flex-row gap-3">
+          <div className="flex gap-y-[30px] flex-row gap-4 lg:gap-6">
             {data?.map((data) => (
-              <div className="card card-compact bg-slate-200 rounded-md p-1 shadow-xl">
+              <div className="card card-compact bg-slate-800 rounded-md p-1 shadow-xl border border-slate-400 shadow-slate-900">
                 <div className="card-body">
                   <img src={data?.icon} alt="Service" />
                   <div className="">
-                    <h6 className="font-bold lg:text-[16px] md:text-[14px] text-[12px] my-1 text-center">
+                    <h6 className="font-bold lg:text-[16px] md:text-[14px] text-[12px] my-1 text-center text-slate-300">
                       Trip To {data?.title}
                     </h6>
-                    <div className="flex justify-around items-center">
-                      <FaUserFriends className="text-[16px] text-slate-700" />
-                      <p className="text-[10px] md:text-[12px] text-slate-600">
+                    <div className="flex justify-around items-center text-slate-400">
+                      <FaUserFriends className="text-[16px]" />
+                      <p className="text-[10px] md:text-[12px]">
                         {data?.people} people going
                       </p>
                     </div>
@@ -47,11 +49,11 @@ const Hero = () => {
         </div>
         {/* =======SummarySearch ======= */}
         <div className="max-w-5xl mx-auto">
-          <div className="bg-slate-200/30 rounded-xl m-6 ml-0 p-5 flex flex-col  lg:flex-row items-center w-full">
-            <div className="shadow flex flex-col lg:flex-row justify-between gap-8 items-center w-full bg-slate-200/80 rounded-xl px-5 py-3">
+          <div className="bg-slate-900/40 rounded-xl m-6 ml-0 p-5 flex flex-col  lg:flex-row items-center w-full border border-yellow-400 shadow-lg shadow-slate-700">
+            <div className="shadow flex flex-col lg:flex-row justify-between gap-8 items-center w-full bg-slate-900/90 rounded-xl px-5 py-3">
               {summarySearchData?.map((data) => (
-                <div className="flex justify-between items-center gap-4">
-                  <div className="text-slate-500 text-2xl">{data?.icon}</div>
+                <div className="flex justify-between items-center text-slate-400 gap-4">
+                  <div className="text-2xl">{data?.icon}</div>
                   <div>
                     <h4 className="text-[12px]">{data?.title}</h4>
                     <h3 className="text-[12px] font-[500]">{data?.subtitle}</h3>

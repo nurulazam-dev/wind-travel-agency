@@ -5,7 +5,6 @@ import customizationImg from "../images/Category/customization.png";
 import cebuImg from "../images/Destinations/cebu.png";
 import manilaImg from "../images/Destinations/manila.png";
 import davaoImg from "../images/Destinations/davao.png";
-import usersIcon from "../images/hero/usersIcon.png";
 import palawanImg from "../images/hero/palawan.png";
 import baguioImg from "../images/hero/baguio.png";
 import boracayImg from "../images/hero/boracay.png";
@@ -111,19 +110,16 @@ export const mostPopularData = {
       icon: palawanImg,
       people: 31,
       title: "Palawan",
-      usersIcon: usersIcon,
     },
     {
       icon: baguioImg,
       people: 27,
       title: "Baguio",
-      usersIcon: usersIcon,
     },
     {
       icon: boracayImg,
       people: 20,
       title: "Boracay",
-      usersIcon: usersIcon,
     },
   ],
 };
