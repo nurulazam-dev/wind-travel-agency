@@ -124,7 +124,7 @@ export const mostPopularData = {
   ],
 };
 
-export const summarySearchData = [
+export const searchBarData = [
   {
     icon: <IoHomeOutline />,
     title: "Accommodation",

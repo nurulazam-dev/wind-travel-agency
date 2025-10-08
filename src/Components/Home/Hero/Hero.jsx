@@ -1,9 +1,6 @@
-import {
-  mostPopularData,
-  summarySearchData,
-} from "../../../Assets/data/dataBank";
+import { mostPopularData, searchBarData } from "../../../Assets/data/dataBank";
 import bgImg from "../../../Assets/images/hero/hero-bg-img.png";
-import { FaUserFriends } from "react-icons/fa";
+import PopularCard from "./PopularCard";
 
 const Hero = () => {
   const { title, data } = mostPopularData;
@@ -27,23 +24,8 @@ const Hero = () => {
           </h4>
 
           <div className="flex gap-y-[30px] flex-row gap-4 lg:gap-6">
-            {data?.map((data) => (
-              <div className="card card-compact bg-slate-800 rounded-md p-1 shadow-xl border border-slate-400 shadow-slate-900">
-                <div className="card-body">
-                  <img src={data?.icon} alt="Service" />
-                  <div className="">
-                    <h6 className="font-bold lg:text-[16px] md:text-[14px] text-[12px] my-1 text-center text-slate-300">
-                      Trip To {data?.title}
-                    </h6>
-                    <div className="flex justify-around items-center text-slate-400">
-                      <FaUserFriends className="text-[16px]" />
-                      <p className="text-[10px] md:text-[12px]">
-                        {data?.people} people going
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {data?.map((d, index) => (
+              <PopularCard d={d} index={index} />
             ))}
           </div>
         </div>
@@ -51,7 +33,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto">
           <div className="bg-slate-900/40 rounded-xl m-6 ml-0 p-5 flex flex-col  lg:flex-row items-center w-full border border-yellow-400 shadow-lg shadow-slate-700">
             <div className="shadow flex flex-col lg:flex-row justify-between gap-8 items-center w-full bg-slate-900/90 rounded-xl px-5 py-3">
-              {summarySearchData?.map((data) => (
+              {searchBarData?.map((data) => (
                 <div className="flex justify-between items-center text-slate-400 gap-4">
                   <div className="text-2xl">{data?.icon}</div>
                   <div>
