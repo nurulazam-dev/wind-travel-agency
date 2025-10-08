@@ -5,11 +5,6 @@ import customizationImg from "../images/Category/customization.png";
 import cebuImg from "../images/Destinations/cebu.png";
 import manilaImg from "../images/Destinations/manila.png";
 import davaoImg from "../images/Destinations/davao.png";
-import userImg from "../images/hero/userIcon.png";
-import calenderImg from "../images/hero/calanderIcon.png";
-import HomeImg from "../images/hero/homeIcon.png";
-import errImg from "../images/hero/errowDown.png";
-import leftErrIcon from "../images/hero/errowLeft.png";
 import usersIcon from "../images/hero/usersIcon.png";
 import palawanImg from "../images/hero/palawan.png";
 import baguioImg from "../images/hero/baguio.png";
@@ -23,6 +18,10 @@ import { GrLounge } from "react-icons/gr";
 import philippineLogo from "../images/TrustedCo/philippine-airlines.png";
 import cebuLogo from "../images/TrustedCo/cebu-pacific.png";
 import airLogo from "../images/TrustedCo/air-asia.png";
+
+import { IoHomeOutline } from "react-icons/io5";
+import { LuCalendarDays } from "react-icons/lu";
+import { FiUsers } from "react-icons/fi";
 
 export const service = {
   title: "We Offer Best Services",
@@ -107,7 +106,6 @@ export const sell = {
 
 export const mostPopularData = {
   title: "Most Popular",
-  leftErrIcon: leftErrIcon,
   data: [
     {
       icon: palawanImg,
@@ -130,32 +128,31 @@ export const mostPopularData = {
   ],
 };
 
-export const summaryData = {
-  data: [
-    {
-      icon: HomeImg,
-      errIcon: errImg,
-      title: "Accommodation",
-      subtitle: "Aklan,Boracay",
-    },
-    {
-      icon: calenderImg,
-      title: "Check-in",
-      subtitle: "04.03.2022",
-    },
-    {
-      icon: calenderImg,
-      title: "Check-Out",
-      subtitle: "04.13.2022",
-    },
-    {
-      icon: userImg,
-      errIcon: errImg,
-      title: "Guests",
-      subtitle: "2Adults",
-    },
-  ],
-};
+export const summarySearchData = [
+  {
+    icon: <IoHomeOutline />,
+    title: "Accommodation",
+    subtitle: "Aklan,Boracay",
+    rightBorder: <div className="border h-8 border-slate-400 ml-6"></div>,
+  },
+  {
+    icon: <LuCalendarDays />,
+    title: "Check-in",
+    subtitle: "04.03.2022",
+    rightBorder: <div className="border h-8 border-slate-400 ml-6"></div>,
+  },
+  {
+    icon: <LuCalendarDays />,
+    title: "Check-Out",
+    subtitle: "04.13.2022",
+    rightBorder: <div className="border h-8 border-slate-400 ml-6"></div>,
+  },
+  {
+    icon: <FiUsers />,
+    title: "Guests",
+    subtitle: "2Adults",
+  },
+];
 
 export const testimonialsData = [
   {

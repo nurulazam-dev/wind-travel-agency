@@ -1,62 +1,29 @@
-import { mostPopularData } from "../../Assets/data/dataBank";
-import bgImg from "../../Assets/images/hero/hero-bg.png";
-import planeImg from "../../Assets/images/hero/plane.png";
+import { mostPopularData, summarySearchData } from "../../Assets/data/dataBank";
+import bgImg from "../../Assets/images/hero/hero-bg-img.png";
 import { FaUserFriends } from "react-icons/fa";
-import { IoHomeOutline } from "react-icons/io5";
-import { LuCalendarDays } from "react-icons/lu";
-import { FiUsers } from "react-icons/fi";
 
 const Hero = () => {
-  const { title, leftErrIcon, data } = mostPopularData;
-  const summarySearchData = [
-    {
-      icon: <IoHomeOutline />,
-      title: "Accommodation",
-      subtitle: "Aklan,Boracay",
-      rightBorder: <div className="border h-8 border-slate-400 ml-6"></div>,
-    },
-    {
-      icon: <LuCalendarDays />,
-      title: "Check-in",
-      subtitle: "04.03.2022",
-      rightBorder: <div className="border h-8 border-slate-400 ml-6"></div>,
-    },
-    {
-      icon: <LuCalendarDays />,
-      title: "Check-Out",
-      subtitle: "04.13.2022",
-      rightBorder: <div className="border h-8 border-slate-400 ml-6"></div>,
-    },
-    {
-      icon: <FiUsers />,
-      title: "Guests",
-      subtitle: "2Adults",
-    },
-  ];
+  const { title, data } = mostPopularData;
+
   return (
     <div
       className="mb-14 text-slate-600"
       style={{ background: `url(${bgImg})`, backgroundSize: "cover" }}
+      // style={{ background: `url(${bgImg})` }}
     >
       <div className="px-4 py-5">
-        <p className="md:text-[14px] text-[12px] lg:text-[16px] font-semibold uppercase text-white">
+        <p className="md:text-[14px] text-[12px] lg:text-[16px] font-semibold uppercase text-slate-700 tracking-wide">
           Mountains | Plains | Beaches
         </p>
-        <div className="lg:text-[47px] md:text-[35px] text-[25px] font-bold text-white">
-          <h3>Spend your vacation</h3>
-          <div className="flex items-center">
-            <h3>with our activities</h3>
-            <img src={planeImg} alt="" className="w-12 md:w-24" />
-          </div>
+        <div className="lg:text-6xl md:text-5xl text-3xl font-bold max-w-2xl text-slate-800 tracking-normal">
+          <h3>Spend your vacation with our activities</h3>
         </div>
         {/* MostPopularCard section */}
         <div className="my-6 py-4">
-          <div className="flex justify-between">
-            <h4 className="uppercase text-[24px] font-bold text-white">
-              {title}
-            </h4>
-            <img src={leftErrIcon} alt="" className="mr-2 pr-3" />
-          </div>
+          <h4 className="uppercase text-[24px] font-bold text-white mb-2">
+            {title}
+          </h4>
+
           <div className="flex gap-y-[30px] flex-row gap-3">
             {data?.map((data) => (
               <div className="card card-compact bg-slate-200 rounded-md p-1 shadow-xl">
