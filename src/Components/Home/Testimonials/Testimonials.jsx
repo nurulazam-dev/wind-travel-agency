@@ -32,7 +32,7 @@ const Testimonials = () => {
             What People Say <br /> About Us.
           </h2>
           <p className="text-[16px] leading-5 text-slate-400 max-w-md mb-8">
-            Hear from our satisfied travelers who trusted WindTravels to create
+            Hear from our satisfied travelers who trusted MNA-Travels to create
             their perfect journey.
           </p>
 

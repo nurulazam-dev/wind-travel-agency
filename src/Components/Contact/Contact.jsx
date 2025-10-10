@@ -64,14 +64,14 @@ const Contact = () => {
             <ContactCard
               Icon={MdPhoneInTalk}
               title="Call Us"
-              content="+1 (800) 555-WIND (9463)"
+              content="+1 (800) 555-MNA (9463)"
               isLink={true}
             />
 
             <ContactCard
               Icon={FaRegEnvelope}
               title="Email Us"
-              content="support@windtravels.com"
+              content="support@mnatravels.com"
               isLink={true}
             />
 

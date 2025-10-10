@@ -9,7 +9,7 @@ const Subscribe = () => {
       </div>
       <h2 className="text-center font-bold lg:text-4xl md:text-3xl text-2xl text-slate-300 max-w-4xl lg:px-0 px-5 mx-auto">
         Subscribe to get information, latest news and other interesting offers
-        about WindTravel
+        about MNA-Travel
       </h2>
 
       <div className="flex mt-8 justify-center lg:px-0 px-4">

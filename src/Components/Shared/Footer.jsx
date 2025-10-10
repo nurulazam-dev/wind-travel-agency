@@ -46,7 +46,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center text-white space-x-2">
               <FaHouseChimney className="w-8 h-8 text-yellow-400" />
               <p className="text-3xl font-extrabold tracking-tight">
-                WindTravels
+                MNA-Travels
               </p>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
@@ -157,7 +157,7 @@ const Footer = () => {
         {/* Bottom Section: Copyright & Newsletter */}
         <div className="mt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p className="mb-4 md:mb-0">
-            &copy; {currentYear} WindTravels. All rights reserved.
+            &copy; {currentYear} MNA-Travels. All rights reserved.
           </p>
 
           {/* Newsletter Signup */}

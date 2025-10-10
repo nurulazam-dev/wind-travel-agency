@@ -15,7 +15,7 @@ const BookingSuccess = ({ formData }) => {
           Booking Confirmed!
         </h1>
         <p className="text-gray-400 text-lg mb-6">
-          Your WindTravels adventure to **{formData?.destination}** is secured.
+          Your MNA-Travels adventure to **{formData?.destination}** is secured.
         </p>
         <p className="text-gray-500 text-sm">
           A detailed itinerary and confirmation email have been sent to your
