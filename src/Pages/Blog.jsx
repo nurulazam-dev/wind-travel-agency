@@ -16,7 +16,7 @@ const Blog = () => {
           Our Latest blog
         </h1>
         <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">
-          WindTravels Blog
+          MNA-Travels Blog
         </h1>
         <p className="mt-2 text-lg text-gray-400">
           Your journey starts here. Explore our travel tips, guides, and

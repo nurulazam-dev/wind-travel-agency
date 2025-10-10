@@ -37,7 +37,7 @@ const Register = () => {
         className="w-full max-w-md p-8 sm:p-10 bg-gray-900 rounded-xl shadow-xl border border-gray-700"
       >
         <h1 className="text-2xl font-bold text-white text-center mb-6">
-          Register to WindTravels
+          Register to MNA-Travels
         </h1>
 
         {/* Registration Form */}

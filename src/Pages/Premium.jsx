@@ -13,7 +13,7 @@ const Premium = () => {
         className="max-w-4xl mx-auto py-4 text-center"
       >
         <h1 className="text-sm font-semibold uppercase tracking-widest text-yellow-400 mb-2">
-          WindTravels Premium
+          MNA-Travels Premium
         </h1>
         <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">
           Travel Smarter, Not Harder.

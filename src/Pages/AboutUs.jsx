@@ -33,11 +33,11 @@ const AboutUs = () => {
           Your Journey, Elevated.
         </h1>
         <h2 className="text-xl md:text-2xl font-medium text-yellow-500 mt-3">
-          The story behind WindTravels: Where expertise meets adventure.
+          The story behind MNA-Travels: Where expertise meets adventure.
         </h2>
         <p className="my-3 text-lg text-gray-400 max-w-4xl mx-auto">
           Founded in 2015 on the principle that travel should be effortless,
-          enriching, and unforgettable, **WindTravels** has grown from a local
+          enriching, and unforgettable, **MNA-Travels** has grown from a local
           startup into a global leader in personalized adventure travel. We
           believe the best journeys are carefully curated, thoughtfully
           supported, and tailored precisely to your dreams.
@@ -82,7 +82,7 @@ const AboutUs = () => {
           transition={{ duration: 0.5 }}
           className="text-4xl font-extrabold text-white mb-6"
         >
-          What Makes WindTravels Different?
+          What Makes MNA-Travels Different?
         </motion.h2>
 
         <motion.div
@@ -125,7 +125,7 @@ const AboutUs = () => {
         </h2>
         <p className="text-gray-400 mb-6">
           We started with a simple desktop app and a passion for hiking. Today,
-          WindTravels serves millions of travelers, crafting experiences on all
+          MNA-Travels serves millions of travelers, crafting experiences on all
           seven continents.
         </p>
         <ul className="space-y-4 text-left text-gray-300">
@@ -134,7 +134,7 @@ const AboutUs = () => {
               2015:
             </span>
             <span>
-              Foundation of WindTravels in a small Chicago office, specializing
+              Foundation of MNA-Travels in a small Chicago office, specializing
               in North American road trips.
             </span>
           </li>
