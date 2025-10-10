@@ -1,10 +1,10 @@
-## Travel Agency
+## MNA Travels
 
-#### Live side: https://wind-travels-agency.netlify.app/
+#### Live side: https://mna-travels.netlify.app/
 
 ### features
 
-- This project / website is about a Travel Agency ( Wind Travels Agency ).
+- This project / website is about a Travel Agency ( MNA Travels ).
 - This is a frontend (React JS) project/website.
 - In this website, we use some route (Home, Blogs, Premium, About US, etc.).
 <hr />
