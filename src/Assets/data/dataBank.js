@@ -158,7 +158,7 @@ export const searchBarData = [
 export const testimonialsData = [
   {
     quote:
-      "WindTravels planned our dream honeymoon to Palawan. Every detail, from the private island transfer to the secluded resorts, was flawless. Truly world-class service!",
+      "MNA-Travels planned our dream honeymoon to Palawan. Every detail, from the private island transfer to the secluded resorts, was flawless. Truly world-class service!",
     name: "Lei Britz",
     title: "Laguna, Philippines",
     avatar: "https://i.pravatar.cc/150?img=31",
@@ -172,21 +172,21 @@ export const testimonialsData = [
   },
   {
     quote:
-      "I used WindTravels for a business trip to Tokyo. Fast, efficient, and they handled all my complex itinerary changes without a hitch. Highly recommend to any executive.",
+      "I used MNA-Travels for a business trip to Tokyo. Fast, efficient, and they handled all my complex itinerary changes without a hitch. Highly recommend to any executive.",
     name: "Javier Lopez",
     title: "Madrid, Spain",
     avatar: "https://i.pravatar.cc/150?img=33",
   },
   {
     quote:
-      "As a frequent traveler, I appreciate the attention to detail that WindTravels provides. They truly understand the needs of their clients. Exceptional service every time.",
+      "As a frequent traveler, I appreciate the attention to detail that MNA-Travels provides. They truly understand the needs of their clients. Exceptional service every time.",
     name: "Michael Smith",
     title: "Sydney, Australia",
     avatar: "https://i.pravatar.cc/150?img=37",
   },
   {
     quote:
-      "WindTravels made our family vacation to Europe stress-free and enjoyable. Their kid-friendly recommendations were spot on! Awesome experience.",
+      "MNA-Travels made our family vacation to Europe stress-free and enjoyable. Their kid-friendly recommendations were spot on! Awesome experience.",
     name: "Anita Kapoor",
     title: "Mumbai, India",
     avatar: "https://i.pravatar.cc/150?img=38",
@@ -200,7 +200,7 @@ export const faqData = [
   },
   {
     q: "How can I contact customer support during my trip?",
-    a: "We offer 24/7 support for travelers. You can reach your dedicated WindTravels assistant via the mobile app, or call our global support line provided in your confirmation email. For urgent matters, the phone line is the fastest method.",
+    a: "We offer 24/7 support for travelers. You can reach your dedicated MNA-Travels assistant via the mobile app, or call our global support line provided in your confirmation email. For urgent matters, the phone line is the fastest method.",
   },
   {
     q: "Can I customize a travel package?",
@@ -283,7 +283,7 @@ export const pricingPlansData = [
     description:
       "Perfect for frequent flyers and digital nomads who need maximum flexibility.",
     features: [
-      "All core WindTravels features",
+      "All core MNA-Travels features",
       "Priority booking alerts (24 hours early)",
       "Standard dedicated support (business hours)",
       "1x complimentary lounge pass per year",
